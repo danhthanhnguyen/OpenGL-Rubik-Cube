@@ -80,8 +80,26 @@ void reset_selected_face(){
 void set_camera()
 {
 
-  gluLookAt(0,80,200, 0,0,0, 0,1,0);
+  gluLookAt(80,80,200, 0,0,0, 0,1,0);
 
+}
+
+void axis() {
+  glBegin(GL_LINES);
+    glColor3f(1.0, 1.0, 1.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(120.0, 0.0, 0.0);
+  glEnd();
+  glBegin(GL_LINES);
+    glColor3f(1.0, 1.0, 1.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 120.0, 0.0);
+  glEnd();
+  glBegin(GL_LINES);
+    glColor3f(1.0, 1.0, 1.0);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 0.0, 120.0);
+  glEnd();
 }
 
 // draw a cube
@@ -170,6 +188,8 @@ void draw_func(void)
 
   // set camera position
   set_camera();
+  
+  axis();
 
   // apply visualization transformations
   glRotatef(rot_x, 1.0, 0.0, 0.0); // rotate in y axis
@@ -194,7 +214,7 @@ void init_func (void)
 { 
 
   // init parameters
-  cube_size = 30.0; // cuboid size
+  cube_size = 20.0; // cuboid size
   rot_x = 0.0; // view rotation x
   rot_y = 0.0; // view rotation y
   crement = 5; // rotation (in/de)crement
