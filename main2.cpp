@@ -6,13 +6,13 @@
 using namespace std;
 
 static float speed = 5;
-static int top[3][3] = { {0,0,0},{0,0,0},{0,0,0} },
-fright[3][3] = { {1,1,1},{1,1,1},{1,1,1} },
-front[3][3] = { {2,2,2},{2,2,2},{2,2,2} },
-back[3][3] = { {3,3,3},{3,3,3},{3,3,3} },
-bottom[3][3] = { {4,4,4},{4,4,4},{4,4,4} },
-fleft[3][3] = { {5,5,5},{5,5,5},{5,5,5} },
-temp[3][3];
+static int top[5][5] = { {0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0} },
+fright[5][5] = { {1,1,1,1,1},{1,1,1,1,1},{1,1,1,1,1},{1,1,1,1,1},{1,1,1,1,1} },
+front[5][5] = { {2,2,2,2,2},{2,2,2,2,2},{2,2,2,2,2},{2,2,2,2,2},{2,2,2,2,2} },
+back[5][5] = { {3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3} },
+bottom[5][5] = { {4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4} },
+fleft[5][5] = { {5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5} },
+temp[5][5];
 int solve[300];
 int count = 0;
 static int rotation = 0;
@@ -1195,12 +1195,12 @@ void colorcube2()
 	polygon(6, 8, 12, 15, 11); // bottom center
 	polygon(6, 9, 10, 14, 13);
 	polygon(6, 12, 13, 14, 15);
-	polygon(bottom[1][1], 8, 9, 13, 12);
+	polygon(6, 8, 9, 13, 12);
 }
 void colorcube3() {
 	polygon(6, 16, 19, 18, 17);
 	polygon(6, 18, 19, 23, 22);
-	polygon(fleft[1][1], 16, 20, 23, 19); // left center
+	polygon(6, 16, 20, 23, 19); // left center
 	polygon(6, 17, 18, 22, 21);
 	polygon(6, 20, 21, 22, 23);
 	polygon(6, 16, 17, 21, 20);
@@ -1210,13 +1210,13 @@ void colorcube4()
 	polygon(6, 24, 27, 26, 25);
 	polygon(6, 26, 27, 31, 30);
 	polygon(6, 24, 28, 31, 27); // right center
-	polygon(fright[1][1], 25, 26, 30, 29);
+	polygon(6, 25, 26, 30, 29);
 	polygon(6, 28, 29, 30, 31);
 	polygon(6, 24, 25, 29, 28);
 }
 void colorcube5() {
 	polygon(6, 32, 35, 34, 33);
-	polygon(top[1][1], 34, 35, 39, 38);
+	polygon(6, 34, 35, 39, 38);
 	polygon(6, 32, 36, 39, 35); // top center
 	polygon(6, 33, 34, 38, 37);
 	polygon(6, 36, 37, 38, 39);
@@ -1228,12 +1228,12 @@ void colorcube6()
 	polygon(6, 42, 43, 47, 46);
 	polygon(6, 40, 44, 47, 43); // front center
 	polygon(6, 41, 42, 46, 45);
-	polygon(front[1][1], 44, 45, 46, 47);
+	polygon(6, 44, 45, 46, 47);
 	polygon(6, 40, 41, 45, 44);
 }
 void colorcube7()
 {
-	polygon(back[1][1], 48, 51, 50, 49);
+	polygon(6, 48, 51, 50, 49);
 	polygon(6, 50, 51, 55, 54);
 	polygon(6, 48, 52, 55, 51); //back center
 	polygon(6, 49, 50, 54, 53);
@@ -1243,8 +1243,8 @@ void colorcube7()
 void colorcube8()
 {
 	polygon(6, 56, 59, 58, 57);
-	polygon(top[1][0], 58, 59, 63, 62);
-	polygon(fleft[0][1], 56, 60, 63, 59); // top left center
+	polygon(6, 58, 59, 63, 62);
+	polygon(6, 56, 60, 63, 59); // top left center
 	polygon(6, 57, 58, 62, 61);
 	polygon(6, 60, 61, 62, 63);
 	polygon(6, 56, 57, 61, 60);
@@ -1252,25 +1252,25 @@ void colorcube8()
 void colorcube9()
 {
 	polygon(6, 64, 67, 66, 65);
-	polygon(top[1][2], 66, 67, 71, 70);
+	polygon(6, 66, 67, 71, 70);
 	polygon(6, 64, 68, 71, 67); // top right center
-	polygon(fright[0][1], 65, 66, 70, 69);
+	polygon(6, 65, 66, 70, 69);
 	polygon(6, 68, 69, 70, 71);
 	polygon(6, 64, 65, 69, 68);
 }
 void colorcube10()
 {
 	polygon(6, 72, 75, 74, 73);
-	polygon(top[2][1], 74, 75, 79, 78);
+	polygon(6, 74, 75, 79, 78);
 	polygon(6, 72, 76, 79, 75); // top front center
 	polygon(6, 73, 74, 78, 77);
-	polygon(front[0][1], 76, 77, 78, 79);
+	polygon(6, 76, 77, 78, 79);
 	polygon(6, 72, 73, 77, 76);
 }
 void colorcube11()
 {
-	polygon(back[0][1], 80, 83, 82, 81);
-	polygon(top[0][1], 82, 83, 87, 86);
+	polygon(6, 80, 83, 82, 81);
+	polygon(6, 82, 83, 87, 86);
 	polygon(6, 80, 84, 87, 83); // top back center
 	polygon(6, 81, 82, 86, 85);
 	polygon(6, 84, 85, 86, 87);
@@ -1280,19 +1280,19 @@ void colorcube12()
 {
 	polygon(6, 80 + 8, 83 + 8, 82 + 8, 81 + 8);
 	polygon(6, 82 + 8, 83 + 8, 87 + 8, 86 + 8);
-	polygon(fleft[2][1], 80 + 8, 84 + 8, 87 + 8, 83 + 8); // bottom left center
+	polygon(6, 80 + 8, 84 + 8, 87 + 8, 83 + 8); // bottom left center
 	polygon(6, 81 + 8, 82 + 8, 86 + 8, 85 + 8);
 	polygon(6, 84 + 8, 85 + 8, 86 + 8, 87 + 8);
-	polygon(bottom[1][0], 80 + 8, 81 + 8, 85 + 8, 84 + 8);
+	polygon(6, 80 + 8, 81 + 8, 85 + 8, 84 + 8);
 }
 void colorcube13()
 {
 	polygon(6, 80 + 16, 83 + 16, 82 + 16, 81 + 16);
 	polygon(6, 82 + 16, 83 + 16, 87 + 16, 86 + 16);
 	polygon(6, 80 + 16, 84 + 16, 87 + 16, 83 + 16); // bottom right center
-	polygon(fright[2][1], 81 + 16, 82 + 16, 86 + 16, 85 + 16);
+	polygon(6, 81 + 16, 82 + 16, 86 + 16, 85 + 16);
 	polygon(6, 84 + 16, 85 + 16, 86 + 16, 87 + 16);
-	polygon(bottom[1][2], 80 + 16, 81 + 16, 85 + 16, 84 + 16);
+	polygon(6, 80 + 16, 81 + 16, 85 + 16, 84 + 16);
 }
 void colorcube14()
 {
@@ -1300,23 +1300,23 @@ void colorcube14()
 	polygon(6, 82 + 24, 83 + 24, 87 + 24, 86 + 24);
 	polygon(6, 80 + 24, 84 + 24, 87 + 24, 83 + 24); // bottom front center
 	polygon(6, 81 + 24, 82 + 24, 86 + 24, 85 + 24);
-	polygon(front[2][1], 84 + 24, 85 + 24, 86 + 24, 87 + 24);
-	polygon(bottom[0][1], 80 + 24, 81 + 24, 85 + 24, 84 + 24);
+	polygon(6, 84 + 24, 85 + 24, 86 + 24, 87 + 24);
+	polygon(6, 80 + 24, 81 + 24, 85 + 24, 84 + 24);
 }
 void colorcube15()
 {
-	polygon(back[2][1], 112, 115, 114, 113);
+	polygon(6, 112, 115, 114, 113);
 	polygon(6, 114, 115, 119, 118);
 	polygon(6, 112, 116, 119, 115); // bottom back center
 	polygon(6, 113, 114, 118, 117);
 	polygon(6, 116, 117, 118, 119);
-	polygon(bottom[2][1], 112, 113, 117, 116);
+	polygon(6, 112, 113, 117, 116);
 }
 void colorcube16()
 {
-	polygon(back[0][2], 120, 123, 122, 121);
-	polygon(top[0][0], 122, 123, 127, 126);
-	polygon(fleft[0][0], 120, 124, 127, 123); // top left back
+	polygon(6, 120, 123, 122, 121);
+	polygon(6, 122, 123, 127, 126);
+	polygon(6, 120, 124, 127, 123); // top left back
 	polygon(6, 121, 122, 126, 125);
 	polygon(6, 124, 125, 126, 127);
 	polygon(6, 120, 121, 125, 124);
@@ -1324,34 +1324,34 @@ void colorcube16()
 void colorcube17()
 {
 	polygon(6, 128, 131, 130, 129);
-	polygon(top[2][0], 130, 131, 135, 134);
-	polygon(fleft[0][2], 128, 132, 135, 131); // top left front
+	polygon(6, 130, 131, 135, 134);
+	polygon(6, 128, 132, 135, 131); // top left front
 	polygon(6, 129, 130, 134, 133);
-	polygon(front[0][0], 132, 133, 134, 135); polygon(6, 128, 129, 133, 132);
+	polygon(6, 132, 133, 134, 135); polygon(6, 128, 129, 133, 132);
 }
 void colorcube18()
 {
-	polygon(back[0][0], 136, 139, 138, 137);
-	polygon(top[0][2], 138, 139, 143, 142);
+	polygon(6, 136, 139, 138, 137);
+	polygon(6, 138, 139, 143, 142);
 	polygon(6, 136, 140, 143, 139); // top right back
-	polygon(fright[0][2], 137, 138, 142, 141);
+	polygon(6, 137, 138, 142, 141);
 	polygon(6, 140, 141, 142, 143);
 	polygon(6, 136, 137, 141, 140);
 }
 void colorcube19()
 {
 	polygon(6, 144, 147, 146, 145);
-	polygon(top[2][2], 146, 147, 151, 150);
+	polygon(6, 146, 147, 151, 150);
 	polygon(6, 144, 148, 151, 147); // top right front
-	polygon(fright[0][0], 145, 146, 150, 149);
-	polygon(front[0][2], 148, 149, 150, 151);
+	polygon(6, 145, 146, 150, 149);
+	polygon(6, 148, 149, 150, 151);
 	polygon(6, 144, 145, 149, 148);
 }
 void colorcube20()
 {
-	polygon(back[1][2], 152, 155, 154, 153);
+	polygon(6, 152, 155, 154, 153);
 	polygon(6, 154, 155, 159, 158);
-	polygon(fleft[1][0], 152, 156, 159, 155); //center left back
+	polygon(6, 152, 156, 159, 155); //center left back
 	polygon(6, 153, 154, 158, 157);
 	polygon(6, 156, 157, 158, 159);
 	polygon(6, 152, 153, 157, 156);
@@ -1360,17 +1360,17 @@ void colorcube21()
 {
 	polygon(6, 160, 163, 162, 161);
 	polygon(6, 162, 163, 167, 166);
-	polygon(fleft[1][2], 160, 164, 167, 163); // center left front
+	polygon(6, 160, 164, 167, 163); // center left front
 	polygon(6, 161, 162, 166, 165);
-	polygon(front[1][0], 164, 165, 166, 167);
+	polygon(6, 164, 165, 166, 167);
 	polygon(6, 160, 161, 165, 164);
 }
 void colorcube22()
 {
-	polygon(back[1][0], 168, 171, 170, 169);
+	polygon(6, 168, 171, 170, 169);
 	polygon(6, 170, 171, 175, 174);
 	polygon(6, 168, 172, 175, 171); // center right back
-	polygon(fright[1][2], 169, 170, 174, 173);
+	polygon(6, 169, 170, 174, 173);
 	polygon(6, 172, 173, 174, 175);
 	polygon(6, 168, 169, 173, 172);
 }
@@ -1379,45 +1379,45 @@ void colorcube23()
 	polygon(6, 176, 179, 178, 177);
 	polygon(6, 178, 179, 183, 182);
 	polygon(6, 176, 180, 183, 179); //center right front
-	polygon(fright[1][0], 177, 178, 182, 181);
-	polygon(front[1][2], 180, 181, 182, 183);
+	polygon(6, 177, 178, 182, 181);
+	polygon(6, 180, 181, 182, 183);
 	polygon(6, 176, 177, 181, 180);
 }
 void colorcube24()
 {
-	polygon(back[2][2], 184, 187, 186, 185);
+	polygon(6, 184, 187, 186, 185);
 	polygon(6, 186, 187, 191, 190);
-	polygon(fleft[2][0], 184, 188, 191, 187); // bottom left back
+	polygon(6, 184, 188, 191, 187); // bottom left back
 	polygon(6, 185, 186, 190, 189);
 	polygon(6, 188, 189, 190, 191);
-	polygon(bottom[2][0], 184, 185, 189, 188);
+	polygon(6, 184, 185, 189, 188);
 }
 void colorcube25()
 {
 	polygon(6, 192, 195, 194, 193);
 	polygon(6, 194, 195, 199, 198);
-	polygon(fleft[2][2], 192, 196, 199, 195); // bottom left front
+	polygon(6, 192, 196, 199, 195); // bottom left front
 	polygon(6, 193, 194, 198, 197);
-	polygon(front[2][0], 196, 197, 198, 199);
-	polygon(bottom[0][0], 192, 193, 197, 196);
+	polygon(6, 196, 197, 198, 199);
+	polygon(6, 192, 193, 197, 196);
 }
 void colorcube26()
 {
-	polygon(back[2][0], 200, 203, 202, 201);
+	polygon(6, 200, 203, 202, 201);
 	polygon(6, 202, 203, 207, 206);
 	polygon(6, 200, 204, 207, 203); // bottom right back
-	polygon(fright[2][2], 201, 202, 206, 205);
+	polygon(6, 201, 202, 206, 205);
 	polygon(6, 204, 205, 206, 207);
-	polygon(bottom[2][2], 200, 201, 205, 204);
+	polygon(6, 200, 201, 205, 204);
 }
 void colorcube27()
 {
 	polygon(6, 208, 211, 210, 209);
 	polygon(6, 210, 211, 215, 214);
 	polygon(6, 208, 212, 215, 211); // bottom right front
-	polygon(fright[2][0], 209, 210, 214, 213);
-	polygon(front[2][2], 212, 213, 214, 215);
-	polygon(bottom[0][2], 208, 209, 213, 212);
+	polygon(6, 209, 210, 214, 213);
+	polygon(6, 212, 213, 214, 215);
+	polygon(6, 208, 209, 213, 212);
 }
 void colorcube28()
 {
@@ -1426,12 +1426,12 @@ void colorcube28()
 	polygon(6, 216, 220, 223, 219); // bottom 2 center
 	polygon(6, 217, 218, 222, 221);
 	polygon(6, 220, 221, 222, 223);
-	polygon(bottom[1][1], 216, 217, 221, 220);
+	polygon(bottom[2][2], 216, 217, 221, 220);
 }
 void colorcube29() {
 	polygon(6, 224, 227, 226, 225);
 	polygon(6, 226, 227, 231, 230);
-	polygon(fleft[1][1], 224, 228, 231, 227); // left 2 center
+	polygon(fleft[2][2], 224, 228, 231, 227); // left 2 center
 	polygon(6, 225, 226, 230, 219);
 	polygon(6, 228, 229, 230, 231);
 	polygon(6, 224, 225, 229, 228);
@@ -1441,13 +1441,13 @@ void colorcube30()
 	polygon(6, 232, 235, 234, 233);
 	polygon(6, 234, 235, 239, 238);
 	polygon(6, 232, 236, 239, 235); // right 2 center
-	polygon(fright[1][1], 233, 234, 238, 237);
+	polygon(fright[2][2], 233, 234, 238, 237);
 	polygon(6, 236, 237, 238, 239);
 	polygon(6, 232, 233, 237, 236);
 }
 void colorcube31() {
 	polygon(6, 240, 243, 242, 241);
-	polygon(top[1][1], 242, 243, 247, 246);
+	polygon(top[2][2], 242, 243, 247, 246);
 	polygon(6, 240, 244, 247, 243); // top 2 center
 	polygon(6, 241, 242, 246, 245);
 	polygon(6, 244, 245, 246, 247);
@@ -1459,12 +1459,12 @@ void colorcube32()
 	polygon(6, 250, 251, 255, 254);
 	polygon(6, 248, 252, 255, 251); // front 2 center
 	polygon(6, 249, 250, 254, 253);
-	polygon(front[1][1], 252, 253, 254, 255);
+	polygon(front[2][2], 252, 253, 254, 255);
 	polygon(6, 248, 249, 253, 252);
 }
 void colorcube33()
 {
-	polygon(back[1][1], 256, 259, 258, 257);
+	polygon(back[2][2], 256, 259, 258, 257);
 	polygon(6, 258, 259, 263, 262);
 	polygon(6, 256, 260, 263, 259); //back 2 center
 	polygon(6, 257, 258, 262, 261);
@@ -1474,8 +1474,8 @@ void colorcube33()
 void colorcube34()
 {
 	polygon(6, 264, 267, 266, 265);
-	polygon(top[1][0], 266, 267, 271, 270);
-	polygon(fleft[0][1], 264, 268, 271, 267); // top 2 left 2 center
+	polygon(top[2][0], 266, 267, 271, 270);
+	polygon(fleft[0][2], 264, 268, 271, 267); // top 2 left 2 center
 	polygon(6, 265, 266, 270, 269);
 	polygon(6, 268, 269, 270, 271);
 	polygon(6, 264, 265, 269, 268);
@@ -1483,25 +1483,25 @@ void colorcube34()
 void colorcube35()
 {
 	polygon(6, 272, 275, 274, 273);
-	polygon(top[1][2], 274, 275, 279, 278);
+	polygon(top[2][4], 274, 275, 279, 278);
 	polygon(6, 272, 276, 279, 275); // top 2 right 2 center
-	polygon(fright[0][1], 273, 274, 278, 277);
+	polygon(fright[0][2], 273, 274, 278, 277);
 	polygon(6, 276, 277, 278, 279);
 	polygon(6, 272, 273, 277, 276);
 }
 void colorcube36()
 {
 	polygon(6, 280, 283, 282, 281);
-	polygon(top[2][1], 282, 283, 287, 286);
+	polygon(top[4][2], 282, 283, 287, 286);
 	polygon(6, 280, 284, 287, 283); // top 2 front 2 center
 	polygon(6, 281, 282, 286, 285);
-	polygon(front[0][1], 284, 285, 286, 287);
+	polygon(front[0][2], 284, 285, 286, 287);
 	polygon(6, 280, 281, 285, 284);
 }
 void colorcube37()
 {
-	polygon(back[0][1], 288, 291, 290, 289);
-	polygon(top[0][1], 290, 291, 295, 294);
+	polygon(back[0][2], 288, 291, 290, 289);
+	polygon(top[0][2], 290, 291, 295, 294);
 	polygon(6, 288, 292, 295, 291); // top 2 back 2 center
 	polygon(6, 289, 290, 294, 293);
 	polygon(6, 292, 293, 294, 295);
@@ -1511,19 +1511,19 @@ void colorcube38()
 {
 	polygon(6, 296, 299, 298, 297);
 	polygon(6, 298, 299, 303, 302);
-	polygon(fleft[2][1], 296, 300, 303, 299); // bottom 2 left 2 center
+	polygon(fleft[4][2], 296, 300, 303, 299); // bottom 2 left 2 center
 	polygon(6, 297, 298, 302, 301);
 	polygon(6, 300, 301, 302, 303);
-	polygon(bottom[1][0], 296, 297, 301, 300);
+	polygon(bottom[2][0], 296, 297, 301, 300);
 }
 void colorcube39()
 {
 	polygon(6, 304, 307, 306, 305);
 	polygon(6, 306, 307, 311, 310);
 	polygon(6, 304, 308, 311, 307); // bottom 2 right 2 center
-	polygon(fright[2][1], 305, 306, 310, 309);
+	polygon(fright[4][2], 305, 306, 310, 309);
 	polygon(6, 308, 309, 310, 311);
-	polygon(bottom[1][2], 304, 305, 309, 308);
+	polygon(bottom[2][4], 304, 305, 309, 308);
 }
 void colorcube40()
 {
@@ -1531,21 +1531,21 @@ void colorcube40()
 	polygon(6, 314, 315, 319, 318);
 	polygon(6, 312, 316, 319, 315); // bottom 2 front 2 center
 	polygon(6, 313, 314, 318, 317);
-	polygon(front[2][1], 316, 317, 318, 319);
-	polygon(bottom[0][1], 312, 313, 317, 316);
+	polygon(front[4][2], 316, 317, 318, 319);
+	polygon(bottom[0][2], 312, 313, 317, 316);
 }
 void colorcube41()
 {
-	polygon(back[2][1], 320, 323, 322, 321);
+	polygon(back[4][2], 320, 323, 322, 321);
 	polygon(6, 322, 323, 327, 326);
 	polygon(6, 320, 324, 327, 323); // bottom 2 back 2 center
 	polygon(6, 321, 322, 326, 325);
 	polygon(6, 324, 325, 326, 327);
-	polygon(bottom[2][1], 320, 321, 325, 324);
+	polygon(bottom[4][2], 320, 321, 325, 324);
 }
 void colorcube42()
 {
-	polygon(back[0][2], 328, 331, 330, 329);
+	polygon(back[0][4], 328, 331, 330, 329);
 	polygon(top[0][0], 330, 331, 335, 334);
 	polygon(fleft[0][0], 328, 332, 335, 331); // top 2 left 2 back
 	polygon(6, 329, 330, 334, 333);
@@ -1555,8 +1555,8 @@ void colorcube42()
 void colorcube43()
 {
 	polygon(6, 336, 339, 338, 337);
-	polygon(top[2][0], 338, 339, 343, 342);
-	polygon(fleft[0][2], 336, 340, 343, 339); // top 2 left 2 front
+	polygon(top[4][0], 338, 339, 343, 342);
+	polygon(fleft[0][4], 336, 340, 343, 339); // top 2 left 2 front
 	polygon(6, 337, 338, 342, 341);
 	polygon(front[0][0], 340, 341, 342, 343);
 	polygon(6, 336, 337, 341, 340);
@@ -1564,26 +1564,26 @@ void colorcube43()
 void colorcube44()
 {
 	polygon(back[0][0], 344, 347, 346, 345);
-	polygon(top[0][2], 346, 347, 351, 350);
+	polygon(top[0][4], 346, 347, 351, 350);
 	polygon(6, 344, 348, 351, 347); // top 2 right 2 back
-	polygon(fright[0][2], 345, 346, 350, 349);
+	polygon(fright[0][4], 345, 346, 350, 349);
 	polygon(6, 348, 349, 350, 351);
 	polygon(6, 344, 345, 349, 348);
 }
 void colorcube45()
 {
 	polygon(6, 352, 355, 354, 353);
-	polygon(top[2][2], 354, 355, 359, 358);
+	polygon(top[4][4], 354, 355, 359, 358);
 	polygon(6, 352, 356, 359, 355); // top 2 right 2 front
 	polygon(fright[0][0], 353, 354, 358, 357);
-	polygon(front[0][2], 356, 357, 358, 359);
+	polygon(front[0][4], 356, 357, 358, 359);
 	polygon(6, 352, 353, 357, 356);
 }
 void colorcube46()
 {
-	polygon(back[1][2], 360, 363, 362, 361);
+	polygon(back[2][4], 360, 363, 362, 361);
 	polygon(6, 362, 363, 367, 366);
-	polygon(fleft[1][0], 360, 364, 367, 363); //center 2 left 2 back
+	polygon(fleft[2][0], 360, 364, 367, 363); //center 2 left 2 back
 	polygon(6, 361, 362, 366, 365);
 	polygon(6, 364, 365, 366, 367);
 	polygon(6, 360, 361, 365, 364);
@@ -1592,17 +1592,17 @@ void colorcube47()
 {
 	polygon(6, 368, 371, 370, 369);
 	polygon(6, 370, 371, 375, 374);
-	polygon(fleft[1][2], 368, 372, 375, 371); // center 2 left 2 front
+	polygon(fleft[2][4], 368, 372, 375, 371); // center 2 left 2 front
 	polygon(6, 369, 370, 374, 373);
-	polygon(front[1][0], 372, 373, 374, 375);
+	polygon(front[2][0], 372, 373, 374, 375);
 	polygon(6, 368, 369, 373, 372);
 }
 void colorcube48()
 {
-	polygon(back[1][0], 376, 379, 378, 377);
+	polygon(back[2][0], 376, 379, 378, 377);
 	polygon(6, 378, 379, 383, 382);
 	polygon(6, 376, 380, 383, 379); // center 2 right 2 back
-	polygon(fright[1][2], 377, 378, 382, 381);
+	polygon(fright[2][4], 377, 378, 382, 381);
 	polygon(6, 380, 381, 382, 383);
 	polygon(6, 376, 377, 381, 380);
 }
@@ -1611,49 +1611,49 @@ void colorcube49()
 	polygon(6, 384, 387, 386, 385);
 	polygon(6, 386, 387, 391, 390);
 	polygon(6, 384, 388, 391, 387); //center 2 right 2 front
-	polygon(fright[1][0], 385, 386, 390, 389);
-	polygon(front[1][2], 388, 389, 390, 391);
+	polygon(fright[2][0], 385, 386, 390, 389);
+	polygon(front[2][4], 388, 389, 390, 391);
 	polygon(6, 384, 385, 389, 388);
 }
 void colorcube50()
 {
-	polygon(back[2][2], 392, 395, 394, 393);
+	polygon(back[4][4], 392, 395, 394, 393);
 	polygon(6, 394, 395, 399, 398);
-	polygon(fleft[2][0], 392, 396, 399, 395); // bottom 2 left 2 back
+	polygon(fleft[4][0], 392, 396, 399, 395); // bottom 2 left 2 back
 	polygon(6, 393, 394, 398, 397);
 	polygon(6, 396, 397, 398, 399);
-	polygon(bottom[2][0], 392, 393, 397, 396);
+	polygon(bottom[4][0], 392, 393, 397, 396);
 }
 void colorcube51()
 {
 	polygon(6, 400, 403, 402, 401);
 	polygon(6, 402, 403, 407, 406);
-	polygon(fleft[2][2], 400, 404, 407, 403); // bottom 2 left 2 front
+	polygon(fleft[4][4], 400, 404, 407, 403); // bottom 2 left 2 front
 	polygon(6, 401, 402, 406, 405);
-	polygon(front[2][0], 404, 405, 406, 407);
+	polygon(front[4][0], 404, 405, 406, 407);
 	polygon(bottom[0][0], 400, 401, 405, 404);
 }
 void colorcube52()
 {
-	polygon(back[2][0], 408, 411, 410, 409);
+	polygon(back[4][0], 408, 411, 410, 409);
 	polygon(6, 410, 411, 415, 414);
 	polygon(6, 408, 412, 415, 411); // bottom 2 right 2 back
-	polygon(fright[2][2], 409, 410, 414, 413);
+	polygon(fright[4][4], 409, 410, 414, 413);
 	polygon(6, 412, 413, 414, 415);
-	polygon(bottom[2][2], 408, 409, 413, 412);
+	polygon(bottom[4][4], 408, 409, 413, 412);
 }
 void colorcube53()
 {
 	polygon(6, 416, 419, 418, 417);
 	polygon(6, 418, 419, 423, 422);
 	polygon(6, 416, 420, 423, 419); // bottom 2 right 2 front
-	polygon(fright[2][0], 417, 418, 422, 421);
-	polygon(front[2][2], 420, 421, 422, 423);
-	polygon(bottom[0][2], 416, 417, 421, 420);
+	polygon(fright[4][0], 417, 418, 422, 421);
+	polygon(front[4][4], 420, 421, 422, 423);
+	polygon(bottom[0][4], 416, 417, 421, 420);
 }
 void colorcube54() {
 	polygon(6, 424, 427, 426, 425);
-	polygon(top[1][1], 426, 427, 431, 430);
+	polygon(top[2][1], 426, 427, 431, 430);
 	polygon(6, 424, 428, 431, 427); // top 2 center left
 	polygon(6, 425, 426, 430, 429);
 	polygon(6, 428, 429, 430, 431);
@@ -1661,7 +1661,7 @@ void colorcube54() {
 }
 void colorcube55() {
 	polygon(6, 432, 435, 434, 433);
-	polygon(top[1][1], 434, 435, 439, 438);
+	polygon(top[1][2], 434, 435, 439, 438);
 	polygon(6, 432, 436, 439, 435); // top 2 center back
 	polygon(6, 433, 434, 438, 437);
 	polygon(6, 436, 437, 438, 439);
@@ -1669,7 +1669,7 @@ void colorcube55() {
 }
 void colorcube56() {
 	polygon(6, 440, 443, 442, 441);
-	polygon(top[1][1], 442, 443, 447, 446);
+	polygon(top[2][3], 442, 443, 447, 446);
 	polygon(6, 440, 444, 447, 443); // top 2 center right
 	polygon(6, 441, 442, 446, 445);
 	polygon(6, 444, 445, 446, 447);
@@ -1677,7 +1677,7 @@ void colorcube56() {
 }
 void colorcube57() {
 	polygon(6, 448, 451, 450, 449);
-	polygon(top[1][1], 450, 451, 455, 454);
+	polygon(top[3][2], 450, 451, 455, 454);
 	polygon(6, 448, 452, 455, 451); // top 2 center right
 	polygon(6, 449, 450, 454, 453);
 	polygon(6, 452, 453, 454, 455);
@@ -1693,7 +1693,7 @@ void colorcube58() {
 }
 void colorcube59() {
 	polygon(6, 464, 467, 466, 465);
-	polygon(top[1][1], 466, 467, 471, 470);
+	polygon(top[1][3], 466, 467, 471, 470);
 	polygon(6, 464, 468, 471, 467); // top 2 back right
 	polygon(6, 465, 466, 470, 469);
 	polygon(6, 468, 469, 470, 471);
@@ -1701,7 +1701,7 @@ void colorcube59() {
 }
 void colorcube60() {
 	polygon(6, 472, 475, 474, 473);
-	polygon(top[1][1], 474, 475, 479, 478);
+	polygon(top[3][3], 474, 475, 479, 478);
 	polygon(6, 472, 476, 479, 475); // top 2 front right
 	polygon(6, 473, 474, 478, 477);
 	polygon(6, 476, 477, 478, 479);
@@ -1709,7 +1709,7 @@ void colorcube60() {
 }
 void colorcube61() {
 	polygon(6, 480, 483, 482, 481);
-	polygon(top[1][1], 482, 483, 487, 486);
+	polygon(top[3][1], 482, 483, 487, 486);
 	polygon(6, 480, 484, 487, 483); // top 2 front right
 	polygon(6, 481, 482, 486, 485);
 	polygon(6, 484, 485, 486, 487);
@@ -1722,13 +1722,13 @@ void colorcube62()
 	polygon(top[0][1], 490, 491, 495, 494);
 	polygon(6, 488, 492, 495, 491); // top 2 back 2 left
 	polygon(6, 489, 490, 494, 493);
-	polygon(back[0][1], 492, 493, 494, 495);
+	polygon(back[0][3], 492, 493, 494, 495);
 	polygon(6, 488, 489, 493, 492);
 }
 void colorcube63()
 {
 	polygon(6, 496, 499, 498, 497);
-	polygon(top[0][1], 498, 499, 503, 502);
+	polygon(top[0][3], 498, 499, 503, 502);
 	polygon(6, 496, 500, 503, 499); // top 2 back 2 left
 	polygon(6, 497, 498, 502, 501);
 	polygon(back[0][1], 500, 501, 502, 503);
@@ -1737,16 +1737,16 @@ void colorcube63()
 void colorcube64()
 {
 	polygon(6, 504, 507, 506, 505);
-	polygon(top[0][1], 506, 507, 511, 510);
+	polygon(top[1][4], 506, 507, 511, 510);
 	polygon(6, 504, 508, 511, 507); // top 2 back 2 right 2
-	polygon(fright[0][1], 505, 506, 510, 509);
+	polygon(fright[0][3], 505, 506, 510, 509);
 	polygon(6, 508, 509, 510, 511);
 	polygon(6, 504, 505, 509, 508);
 }
 void colorcube65()
 {
 	polygon(6, 512, 515, 514, 513);
-	polygon(top[0][1], 514, 515, 519, 518);
+	polygon(top[3][4], 514, 515, 519, 518);
 	polygon(6, 512, 516, 519, 515); // top 2 front 2 right 2
 	polygon(fright[0][1], 513, 514, 518, 517);
 	polygon(6, 516, 517, 518, 519);
@@ -1755,16 +1755,16 @@ void colorcube65()
 void colorcube66()
 {
 	polygon(6, 520, 523, 522, 521);
-	polygon(top[0][1], 522, 523, 527, 526);
+	polygon(top[4][3], 522, 523, 527, 526);
 	polygon(6, 520, 524, 527, 523); // top 2 right 2 front 2
 	polygon(6, 521, 522, 526, 525);
-	polygon(front[0][1], 524, 525, 526, 527);
+	polygon(front[0][3], 524, 525, 526, 527);
 	polygon(6, 520, 521, 525, 524);
 }
 void colorcube67()
 {
 	polygon(6, 528, 531, 530, 529);
-	polygon(top[0][1], 530, 531, 535, 534);
+	polygon(top[4][1], 530, 531, 535, 534);
 	polygon(6, 528, 532, 535, 531); // top 2 right 2 front 2
 	polygon(6, 529, 530, 534, 533);
 	polygon(front[0][1], 532, 533, 534, 535);
@@ -1773,8 +1773,8 @@ void colorcube67()
 void colorcube68()
 {
 	polygon(6, 536, 539, 538, 537);
-	polygon(top[0][1], 538, 539, 543, 542);
-	polygon(fleft[0][1], 536, 540, 543, 539); // top 2 right 2 front 2
+	polygon(top[3][0], 538, 539, 543, 542);
+	polygon(fleft[0][3], 536, 540, 543, 539); // top 2 right 2 front 2
 	polygon(6, 537, 538, 542, 541);
 	polygon(6, 540, 541, 542, 543);
 	polygon(6, 536, 537, 541, 540);
@@ -1782,7 +1782,7 @@ void colorcube68()
 void colorcube69()
 {
 	polygon(6, 544, 547, 546, 545);
-	polygon(top[0][1], 546, 547, 551, 550);
+	polygon(top[1][0], 546, 547, 551, 550);
 	polygon(fleft[0][1], 544, 548, 551, 547); // top 2 right 2 front 2
 	polygon(6, 545, 546, 550, 549);
 	polygon(6, 548, 549, 550, 551);
@@ -1794,7 +1794,7 @@ void colorcube70()
 	polygon(6, 554, 555, 559, 558);
 	polygon(6, 552, 556, 559, 555); // front 2 center left
 	polygon(6, 553, 554, 558, 557);
-	polygon(front[1][1], 556, 557, 558, 559);
+	polygon(front[2][1], 556, 557, 558, 559);
 	polygon(6, 552, 553, 557, 556);
 }
 void colorcube71()
@@ -1812,7 +1812,7 @@ void colorcube72()
 	polygon(6, 570, 571, 575, 574);
 	polygon(6, 568, 572, 575, 571); // front 2 center left
 	polygon(6, 569, 570, 574, 573);
-	polygon(front[1][1], 572, 573, 574, 575);
+	polygon(front[1][2], 572, 573, 574, 575);
 	polygon(6, 568, 569, 573, 572);
 }
 void colorcube73()
@@ -1821,7 +1821,7 @@ void colorcube73()
 	polygon(6, 578, 579, 583, 582);
 	polygon(6, 576, 580, 583, 579); // front 2 center left
 	polygon(6, 577, 578, 582, 581);
-	polygon(front[1][1], 580, 581, 582, 583);
+	polygon(front[1][3], 580, 581, 582, 583);
 	polygon(6, 576, 577, 581, 580);
 }
 void colorcube74()
@@ -1830,7 +1830,7 @@ void colorcube74()
 	polygon(6, 586, 587, 591, 590);
 	polygon(6, 584, 588, 591, 587); // front 2 center right
 	polygon(6, 585, 586, 590, 589);
-	polygon(front[1][1], 588, 589, 590, 591);
+	polygon(front[2][3], 588, 589, 590, 591);
 	polygon(6, 584, 585, 589, 588);
 }
 void colorcube75()
@@ -1839,7 +1839,7 @@ void colorcube75()
 	polygon(6, 586 + 8, 587 + 8, 591 + 8, 590 + 8);
 	polygon(6, 584 + 8, 588 + 8, 591 + 8, 587 + 8); // front 2 center right
 	polygon(6, 585 + 8, 586 + 8, 590 + 8, 589 + 8);
-	polygon(front[1][1], 588 + 8, 589 + 8, 590 + 8, 591 + 8);
+	polygon(front[3][3], 588 + 8, 589 + 8, 590 + 8, 591 + 8);
 	polygon(6, 584 + 8, 585 + 8, 589 + 8, 588 + 8);
 }
 void colorcube76()
@@ -1848,7 +1848,7 @@ void colorcube76()
 	polygon(6, 586 + 16, 587 + 16, 591 + 16, 590 + 16);
 	polygon(6, 584 + 16, 588 + 16, 591 + 16, 587 + 16); // front 2 center right
 	polygon(6, 585 + 16, 586 + 16, 590 + 16, 589 + 16);
-	polygon(front[1][1], 588 + 16, 589 + 16, 590 + 16, 591 + 16);
+	polygon(front[3][2], 588 + 16, 589 + 16, 590 + 16, 591 + 16);
 	polygon(6, 584 + 16, 585 + 16, 589 + 16, 588 + 16);
 }
 void colorcube77()
@@ -1857,25 +1857,25 @@ void colorcube77()
 	polygon(6, 586 + 24, 587 + 24, 591 + 24, 590 + 24);
 	polygon(6, 584 + 24, 588 + 24, 591 + 24, 587 + 24); // front 2 center right
 	polygon(6, 585 + 24, 586 + 24, 590 + 24, 589 + 24);
-	polygon(front[1][1], 588 + 24, 589 + 24, 590 + 24, 591 + 24);
+	polygon(front[3][1], 588 + 24, 589 + 24, 590 + 24, 591 + 24);
 	polygon(6, 584 + 24, 585 + 24, 589 + 24, 588 + 24);
 }
 void colorcube78()
 {
 	polygon(6, 584 + 32, 587 + 32, 586 + 32, 585 + 32);
 	polygon(6, 586 + 32, 587 + 32, 591 + 32, 590 + 32);
-	polygon(fleft[1][1], 584 + 32, 588 + 32, 591 + 32, 587 + 32); // front 2 center right
+	polygon(fleft[3][4], 584 + 32, 588 + 32, 591 + 32, 587 + 32); // front 2 center right
 	polygon(6, 585 + 32, 586 + 32, 590 + 32, 589 + 32);
-	polygon(front[1][1], 588 + 32, 589 + 32, 590 + 32, 591 + 32);
+	polygon(front[3][0], 588 + 32, 589 + 32, 590 + 32, 591 + 32);
 	polygon(6, 584 + 32, 585 + 32, 589 + 32, 588 + 32);
 }
 void colorcube79()
 {
 	polygon(6, 584 + 40, 587 + 40, 586 + 40, 585 + 40);
 	polygon(6, 586 + 40, 587 + 40, 591 + 40, 590 + 40);
-	polygon(fleft[1][1], 584 + 40, 588 + 40, 591 + 40, 587 + 40); // front 2 center right
+	polygon(fleft[1][4], 584 + 40, 588 + 40, 591 + 40, 587 + 40); // front 2 center right
 	polygon(6, 585 + 40, 586 + 40, 590 + 40, 589 + 40);
-	polygon(front[1][1], 588 + 40, 589 + 40, 590 + 40, 591 + 40);
+	polygon(front[1][0], 588 + 40, 589 + 40, 590 + 40, 591 + 40);
 	polygon(6, 584 + 40, 585 + 40, 589 + 40, 588 + 40);
 }
 void colorcube80()
@@ -1883,8 +1883,8 @@ void colorcube80()
 	polygon(6, 584 + 48, 587 + 48, 586 + 48, 585 + 48);
 	polygon(6, 586 + 48, 587 + 48, 591 + 48, 590 + 48);
 	polygon(6, 584 + 48, 588 + 48, 591 + 48, 587 + 48); // front 2 center right
-	polygon(fright[1][1], 585 + 48, 586 + 48, 590 + 48, 589 + 48);
-	polygon(front[1][1], 588 + 48, 589 + 48, 590 + 48, 591 + 48);
+	polygon(fright[1][0], 585 + 48, 586 + 48, 590 + 48, 589 + 48);
+	polygon(front[1][4], 588 + 48, 589 + 48, 590 + 48, 591 + 48);
 	polygon(6, 584 + 48, 585 + 48, 589 + 48, 588 + 48);
 }
 void colorcube81()
@@ -1892,8 +1892,8 @@ void colorcube81()
 	polygon(6, 584 + 56, 587 + 56, 586 + 56, 585 + 56);
 	polygon(6, 586 + 56, 587 + 56, 591 + 56, 590 + 56);
 	polygon(6, 584 + 56, 588 + 56, 591 + 56, 587 + 56); // front 2 center right
-	polygon(fright[1][1], 585 + 56, 586 + 56, 590 + 56, 589 + 56);
-	polygon(front[1][1], 588 + 56, 589 + 56, 590 + 56, 591 + 56);
+	polygon(fright[3][0], 585 + 56, 586 + 56, 590 + 56, 589 + 56);
+	polygon(front[3][4], 588 + 56, 589 + 56, 590 + 56, 591 + 56);
 	polygon(6, 584 + 56, 585 + 56, 589 + 56, 588 + 56);
 }
 void colorcube82()
@@ -1902,8 +1902,8 @@ void colorcube82()
 	polygon(6, 586 + 64, 587 + 64, 591 + 64, 590 + 64);
 	polygon(6, 584 + 64, 588 + 64, 591 + 64, 587 + 64); // front 2 center right
 	polygon(6, 585 + 64, 586 + 64, 590 + 64, 589 + 64);
-	polygon(front[1][1], 588 + 64, 589 + 64, 590 + 64, 591 + 64);
-	polygon(bottom[1][1], 584 + 64, 585 + 64, 589 + 64, 588 + 64);
+	polygon(front[4][3], 588 + 64, 589 + 64, 590 + 64, 591 + 64);
+	polygon(bottom[0][3], 584 + 64, 585 + 64, 589 + 64, 588 + 64);
 }
 void colorcube83()
 {
@@ -1911,15 +1911,15 @@ void colorcube83()
 	polygon(6, 586 + 72, 587 + 72, 591 + 72, 590 + 72);
 	polygon(6, 584 + 72, 588 + 72, 591 + 72, 587 + 72); // front 2 center right
 	polygon(6, 585 + 72, 586 + 72, 590 + 72, 589 + 72);
-	polygon(front[1][1], 588 + 72, 589 + 72, 590 + 72, 591 + 72);
-	polygon(bottom[1][1], 584 + 72, 585 + 72, 589 + 72, 588 + 72);
+	polygon(front[4][1], 588 + 72, 589 + 72, 590 + 72, 591 + 72);
+	polygon(bottom[0][1], 584 + 72, 585 + 72, 589 + 72, 588 + 72);
 }
 void colorcube84()
 {
 	polygon(6, 584 + 80, 587 + 80, 586 + 80, 585 + 80);
 	polygon(6, 586 + 80, 587 + 80, 591 + 80, 590 + 80);
 	polygon(6, 584 + 80, 588 + 80, 591 + 80, 587 + 80); // front 2 center right
-	polygon(fright[1][1], 585 + 80, 586 + 80, 590 + 80, 589 + 80);
+	polygon(fright[1][2], 585 + 80, 586 + 80, 590 + 80, 589 + 80);
 	polygon(6, 588 + 80, 589 + 80, 590 + 80, 591 + 80);
 	polygon(6, 584 + 80, 585 + 80, 589 + 80, 588 + 80);
 }
@@ -1937,7 +1937,7 @@ void colorcube86()
 	polygon(6, 584 + 96, 587 + 96, 586 + 96, 585 + 96);
 	polygon(6, 586 + 96, 587 + 96, 591 + 96, 590 + 96);
 	polygon(6, 584 + 96, 588 + 96, 591 + 96, 587 + 96); // front 2 center right
-	polygon(fright[1][1], 585 + 96, 586 + 96, 590 + 96, 589 + 96);
+	polygon(fright[1][3], 585 + 96, 586 + 96, 590 + 96, 589 + 96);
 	polygon(6, 588 + 96, 589 + 96, 590 + 96, 591 + 96);
 	polygon(6, 584 + 96, 585 + 96, 589 + 96, 588 + 96);
 }
@@ -1946,7 +1946,7 @@ void colorcube87()
 	polygon(6, 584 + 104, 587 + 104, 586 + 104, 585 + 104);
 	polygon(6, 586 + 104, 587 + 104, 591 + 104, 590 + 104);
 	polygon(6, 584 + 104, 588 + 104, 591 + 104, 587 + 104); // front 2 center right
-	polygon(fright[1][1], 585 + 104, 586 + 104, 590 + 104, 589 + 104);
+	polygon(fright[2][3], 585 + 104, 586 + 104, 590 + 104, 589 + 104);
 	polygon(6, 588 + 104, 589 + 104, 590 + 104, 591 + 104);
 	polygon(6, 584 + 104, 585 + 104, 589 + 104, 588 + 104);
 }
@@ -1955,7 +1955,7 @@ void colorcube88()
 	polygon(6, 584 + 112, 587 + 112, 586 + 112, 585 + 112);
 	polygon(6, 586 + 112, 587 + 112, 591 + 112, 590 + 112);
 	polygon(6, 584 + 112, 588 + 112, 591 + 112, 587 + 112); // front 2 center right
-	polygon(fright[1][1], 585 + 112, 586 + 112, 590 + 112, 589 + 112);
+	polygon(fright[3][3], 585 + 112, 586 + 112, 590 + 112, 589 + 112);
 	polygon(6, 588 + 112, 589 + 112, 590 + 112, 591 + 112);
 	polygon(6, 584 + 112, 585 + 112, 589 + 112, 588 + 112);
 }
@@ -1964,7 +1964,7 @@ void colorcube89()
 	polygon(6, 584 + 120, 587 + 120, 586 + 120, 585 + 120);
 	polygon(6, 586 + 120, 587 + 120, 591 + 120, 590 + 120);
 	polygon(6, 584 + 120, 588 + 120, 591 + 120, 587 + 120); // front 2 center right
-	polygon(fright[1][1], 585 + 120, 586 + 120, 590 + 120, 589 + 120);
+	polygon(fright[3][2], 585 + 120, 586 + 120, 590 + 120, 589 + 120);
 	polygon(6, 588 + 120, 589 + 120, 590 + 120, 591 + 120);
 	polygon(6, 584 + 120, 585 + 120, 589 + 120, 588 + 120);
 }
@@ -1973,7 +1973,7 @@ void colorcube90()
 	polygon(6, 584 + 128, 587 + 128, 586 + 128, 585 + 128);
 	polygon(6, 586 + 128, 587 + 128, 591 + 128, 590 + 128);
 	polygon(6, 584 + 128, 588 + 128, 591 + 128, 587 + 128); // front 2 center right
-	polygon(fright[1][1], 585 + 128, 586 + 128, 590 + 128, 589 + 128);
+	polygon(fright[3][1], 585 + 128, 586 + 128, 590 + 128, 589 + 128);
 	polygon(6, 588 + 128, 589 + 128, 590 + 128, 591 + 128);
 	polygon(6, 584 + 128, 585 + 128, 589 + 128, 588 + 128);
 }
@@ -1982,7 +1982,7 @@ void colorcube91()
 	polygon(6, 584 + 136, 587 + 136, 586 + 136, 585 + 136);
 	polygon(6, 586 + 136, 587 + 136, 591 + 136, 590 + 136);
 	polygon(6, 584 + 136, 588 + 136, 591 + 136, 587 + 136); // front 2 center right
-	polygon(fright[1][1], 585 + 136, 586 + 136, 590 + 136, 589 + 136);
+	polygon(fright[2][1], 585 + 136, 586 + 136, 590 + 136, 589 + 136);
 	polygon(6, 588 + 136, 589 + 136, 590 + 136, 591 + 136);
 	polygon(6, 584 + 136, 585 + 136, 589 + 136, 588 + 136);
 }
@@ -1991,41 +1991,41 @@ void colorcube92()
 	polygon(6, 584 + 144, 587 + 144, 586 + 144, 585 + 144);
 	polygon(6, 586 + 144, 587 + 144, 591 + 144, 590 + 144);
 	polygon(6, 584 + 144, 588 + 144, 591 + 144, 587 + 144); // front 2 center right
-	polygon(fright[1][1], 585 + 144, 586 + 144, 590 + 144, 589 + 144);
+	polygon(fright[4][1], 585 + 144, 586 + 144, 590 + 144, 589 + 144);
 	polygon(6, 588 + 144, 589 + 144, 590 + 144, 591 + 144);
-	polygon(bottom[1][1], 584 + 144, 585 + 144, 589 + 144, 588 + 144);
+	polygon(bottom[1][4], 584 + 144, 585 + 144, 589 + 144, 588 + 144);
 }
 void colorcube93()
 {
 	polygon(6, 584 + 152, 587 + 152, 586 + 152, 585 + 152);
 	polygon(6, 586 + 152, 587 + 152, 591 + 152, 590 + 152);
 	polygon(6, 584 + 152, 588 + 152, 591 + 152, 587 + 152); // front 2 center right
-	polygon(fright[1][1], 585 + 152, 586 + 152, 590 + 152, 589 + 152);
+	polygon(fright[4][3], 585 + 152, 586 + 152, 590 + 152, 589 + 152);
 	polygon(6, 588 + 152, 589 + 152, 590 + 152, 591 + 152);
-	polygon(bottom[1][1], 584 + 152, 585 + 152, 589 + 152, 588 + 152);
+	polygon(bottom[3][4], 584 + 152, 585 + 152, 589 + 152, 588 + 152);
 }
 void colorcube94()
 {
-	polygon(back[1][1], 584 + 160, 587 + 160, 586 + 160, 585 + 160);
+	polygon(back[3][0], 584 + 160, 587 + 160, 586 + 160, 585 + 160);
 	polygon(6, 586 + 160, 587 + 160, 591 + 160, 590 + 160);
 	polygon(6, 584 + 160, 588 + 160, 591 + 160, 587 + 160); // front 2 center right
-	polygon(fright[1][1], 585 + 160, 586 + 160, 590 + 160, 589 + 160);
+	polygon(fright[3][4], 585 + 160, 586 + 160, 590 + 160, 589 + 160);
 	polygon(6, 588 + 160, 589 + 160, 590 + 160, 591 + 160);
 	polygon(6, 584 + 160, 585 + 160, 589 + 160, 588 + 160);
 }
 void colorcube95()
 {
-	polygon(back[1][1], 584 + 168, 587 + 168, 586 + 168, 585 + 168);
+	polygon(back[1][0], 584 + 168, 587 + 168, 586 + 168, 585 + 168);
 	polygon(6, 586 + 168, 587 + 168, 591 + 168, 590 + 168);
 	polygon(6, 584 + 168, 588 + 168, 591 + 168, 587 + 168); // front 2 center right
-	polygon(fright[1][1], 585 + 168, 586 + 168, 590 + 168, 589 + 168);
+	polygon(fright[1][4], 585 + 168, 586 + 168, 590 + 168, 589 + 168);
 	polygon(6, 588 + 168, 589 + 168, 590 + 168, 591 + 168);
 	polygon(6, 584 + 168, 585 + 168, 589 + 168, 588 + 168);
 }
 void colorcube96() {
 	polygon(6, 584 + 176, 587 + 176, 586 + 176, 585 + 176);
 	polygon(6, 586 + 176, 587 + 176, 591 + 176, 590 + 176);
-	polygon(fleft[1][1], 584 + 176, 588 + 176, 591 + 176, 587 + 176); // front 2 center right
+	polygon(fleft[2][1], 584 + 176, 588 + 176, 591 + 176, 587 + 176); // front 2 center right
 	polygon(6, 585 + 176, 586 + 176, 590 + 176, 589 + 176);
 	polygon(6, 588 + 176, 589 + 176, 590 + 176, 591 + 176);
 	polygon(6, 584 + 176, 585 + 176, 589 + 176, 588 + 176);
@@ -2041,7 +2041,7 @@ void colorcube97() {
 void colorcube98() {
 	polygon(6, 584 + 192, 587 + 192, 586 + 192, 585 + 192);
 	polygon(6, 586 + 192, 587 + 192, 591 + 192, 590 + 192);
-	polygon(fleft[1][1], 584 + 192, 588 + 192, 591 + 192, 587 + 192); // front 2 center right
+	polygon(fleft[1][2], 584 + 192, 588 + 192, 591 + 192, 587 + 192); // front 2 center right
 	polygon(6, 585 + 192, 586 + 192, 590 + 192, 589 + 192);
 	polygon(6, 588 + 192, 589 + 192, 590 + 192, 591 + 192);
 	polygon(6, 584 + 192, 585 + 192, 589 + 192, 588 + 192);
@@ -2049,7 +2049,7 @@ void colorcube98() {
 void colorcube99() {
 	polygon(6, 584 + 200, 587 + 200, 586 + 200, 585 + 200);
 	polygon(6, 586 + 200, 587 + 200, 591 + 200, 590 + 200);
-	polygon(fleft[1][1], 584 + 200, 588 + 200, 591 + 200, 587 + 200); // front 2 center right
+	polygon(fleft[1][3], 584 + 200, 588 + 200, 591 + 200, 587 + 200); // front 2 center right
 	polygon(6, 585 + 200, 586 + 200, 590 + 200, 589 + 200);
 	polygon(6, 588 + 200, 589 + 200, 590 + 200, 591 + 200);
 	polygon(6, 584 + 200, 585 + 200, 589 + 200, 588 + 200);
@@ -2057,7 +2057,7 @@ void colorcube99() {
 void colorcube100() {
 	polygon(6, 584 + 208, 587 + 208, 586 + 208, 585 + 208);
 	polygon(6, 586 + 208, 587 + 208, 591 + 208, 590 + 208);
-	polygon(fleft[1][1], 584 + 208, 588 + 208, 591 + 208, 587 + 208); // front 2 center right
+	polygon(fleft[2][3], 584 + 208, 588 + 208, 591 + 208, 587 + 208); // front 2 center right
 	polygon(6, 585 + 208, 586 + 208, 590 + 208, 589 + 208);
 	polygon(6, 588 + 208, 589 + 208, 590 + 208, 591 + 208);
 	polygon(6, 584 + 208, 585 + 208, 589 + 208, 588 + 208);
@@ -2065,7 +2065,7 @@ void colorcube100() {
 void colorcube101() {
 	polygon(6, 584 + 216, 587 + 216, 586 + 216, 585 + 216);
 	polygon(6, 586 + 216, 587 + 216, 591 + 216, 590 + 216);
-	polygon(fleft[1][1], 584 + 216, 588 + 216, 591 + 216, 587 + 216); // front 2 center right
+	polygon(fleft[3][3], 584 + 216, 588 + 216, 591 + 216, 587 + 216); // front 2 center right
 	polygon(6, 585 + 216, 586 + 216, 590 + 216, 589 + 216);
 	polygon(6, 588 + 216, 589 + 216, 590 + 216, 591 + 216);
 	polygon(6, 584 + 216, 585 + 216, 589 + 216, 588 + 216);
@@ -2073,7 +2073,7 @@ void colorcube101() {
 void colorcube102() {
 	polygon(6, 584 + 224, 587 + 224, 586 + 224, 585 + 224);
 	polygon(6, 586 + 224, 587 + 224, 591 + 224, 590 + 224);
-	polygon(fleft[1][1], 584 + 224, 588 + 224, 591 + 224, 587 + 224); // front 2 center right
+	polygon(fleft[3][2], 584 + 224, 588 + 224, 591 + 224, 587 + 224); // front 2 center right
 	polygon(6, 585 + 224, 586 + 224, 590 + 224, 589 + 224);
 	polygon(6, 588 + 224, 589 + 224, 590 + 224, 591 + 224);
 	polygon(6, 584 + 224, 585 + 224, 589 + 224, 588 + 224);
@@ -2081,23 +2081,23 @@ void colorcube102() {
 void colorcube103() {
 	polygon(6, 584 + 232, 587 + 232, 586 + 232, 585 + 232);
 	polygon(6, 586 + 232, 587 + 232, 591 + 232, 590 + 232);
-	polygon(fleft[1][1], 584 + 232, 588 + 232, 591 + 232, 587 + 232); // front 2 center right
+	polygon(fleft[3][1], 584 + 232, 588 + 232, 591 + 232, 587 + 232); // front 2 center right
 	polygon(6, 585 + 232, 586 + 232, 590 + 232, 589 + 232);
 	polygon(6, 588 + 232, 589 + 232, 590 + 232, 591 + 232);
 	polygon(6, 584 + 232, 585 + 232, 589 + 232, 588 + 232);
 }
 void colorcube104() {
-	polygon(back[1][1], 584 + 240, 587 + 240, 586 + 240, 585 + 240);
+	polygon(back[3][4], 584 + 240, 587 + 240, 586 + 240, 585 + 240);
 	polygon(6, 586 + 240, 587 + 240, 591 + 240, 590 + 240);
-	polygon(fleft[1][1], 584 + 240, 588 + 240, 591 + 240, 587 + 240); // front 2 center right
+	polygon(fleft[3][0], 584 + 240, 588 + 240, 591 + 240, 587 + 240); // front 2 center right
 	polygon(6, 585 + 240, 586 + 240, 590 + 240, 589 + 240);
 	polygon(6, 588 + 240, 589 + 240, 590 + 240, 591 + 240);
 	polygon(6, 584 + 240, 585 + 240, 589 + 240, 588 + 240);
 }
 void colorcube105() {
-	polygon(back[1][1], 584 + 248, 587 + 248, 586 + 248, 585 + 248);
+	polygon(back[1][4], 584 + 248, 587 + 248, 586 + 248, 585 + 248);
 	polygon(6, 586 + 248, 587 + 248, 591 + 248, 590 + 248);
-	polygon(fleft[1][1], 584 + 248, 588 + 248, 591 + 248, 587 + 248); // front 2 center right
+	polygon(fleft[1][0], 584 + 248, 588 + 248, 591 + 248, 587 + 248); // front 2 center right
 	polygon(6, 585 + 248, 586 + 248, 590 + 248, 589 + 248);
 	polygon(6, 588 + 248, 589 + 248, 590 + 248, 591 + 248);
 	polygon(6, 584 + 248, 585 + 248, 589 + 248, 588 + 248);
@@ -2105,22 +2105,22 @@ void colorcube105() {
 void colorcube106() {
 	polygon(6, 584 + 256, 587 + 256, 586 + 256, 585 + 256);
 	polygon(6, 586 + 256, 587 + 256, 591 + 256, 590 + 256);
-	polygon(fleft[1][1], 584 + 256, 588 + 256, 591 + 256, 587 + 256); // front 2 center right
+	polygon(fleft[4][1], 584 + 256, 588 + 256, 591 + 256, 587 + 256); // front 2 center right
 	polygon(6, 585 + 256, 586 + 256, 590 + 256, 589 + 256);
 	polygon(6, 588 + 256, 589 + 256, 590 + 256, 591 + 256);
-	polygon(bottom[1][1], 584 + 256, 585 + 256, 589 + 256, 588 + 256);
+	polygon(bottom[3][0], 584 + 256, 585 + 256, 589 + 256, 588 + 256);
 }
 void colorcube107() {
 	polygon(6, 584 + 264, 587 + 264, 586 + 264, 585 + 264);
 	polygon(6, 586 + 264, 587 + 264, 591 + 264, 590 + 264);
-	polygon(fleft[1][1], 584 + 264, 588 + 264, 591 + 264, 587 + 264); // front 2 center right
+	polygon(fleft[4][3], 584 + 264, 588 + 264, 591 + 264, 587 + 264); // front 2 center right
 	polygon(6, 585 + 264, 586 + 264, 590 + 264, 589 + 264);
 	polygon(6, 588 + 264, 589 + 264, 590 + 264, 591 + 264);
-	polygon(bottom[1][1], 584 + 264, 585 + 264, 589 + 264, 588 + 264);
+	polygon(bottom[1][0], 584 + 264, 585 + 264, 589 + 264, 588 + 264);
 }
 void colorcube108()
 {
-	polygon(back[1][1], 584 + 272, 587 + 272, 586 + 272, 585 + 272);
+	polygon(back[2][1], 584 + 272, 587 + 272, 586 + 272, 585 + 272);
 	polygon(6, 586 + 272, 587 + 272, 591 + 272, 590 + 272);
 	polygon(6, 584 + 272, 588 + 272, 591 + 272, 587 + 272); // front 2 center right
 	polygon(6, 585 + 272, 586 + 272, 590 + 272, 589 + 272);
@@ -2138,7 +2138,7 @@ void colorcube109()
 }
 void colorcube110()
 {
-	polygon(back[1][1], 584 + 288, 587 + 288, 586 + 288, 585 + 288);
+	polygon(back[1][2], 584 + 288, 587 + 288, 586 + 288, 585 + 288);
 	polygon(6, 586 + 288, 587 + 288, 591 + 288, 590 + 288);
 	polygon(6, 584 + 288, 588 + 288, 591 + 288, 587 + 288); // front 2 center right
 	polygon(6, 585 + 288, 586 + 288, 590 + 288, 589 + 288);
@@ -2147,7 +2147,7 @@ void colorcube110()
 }
 void colorcube111()
 {
-	polygon(back[1][1], 584 + 296, 587 + 296, 586 + 296, 585 + 296);
+	polygon(back[1][3], 584 + 296, 587 + 296, 586 + 296, 585 + 296);
 	polygon(6, 586 + 296, 587 + 296, 591 + 296, 590 + 296);
 	polygon(6, 584 + 296, 588 + 296, 591 + 296, 587 + 296); // front 2 center right
 	polygon(6, 585 + 296, 586 + 296, 590 + 296, 589 + 296);
@@ -2156,7 +2156,7 @@ void colorcube111()
 }
 void colorcube112()
 {
-	polygon(back[1][1], 584 + 304, 587 + 304, 586 + 304, 585 + 304);
+	polygon(back[2][3], 584 + 304, 587 + 304, 586 + 304, 585 + 304);
 	polygon(6, 586 + 304, 587 + 304, 591 + 304, 590 + 304);
 	polygon(6, 584 + 304, 588 + 304, 591 + 304, 587 + 304); // front 2 center right
 	polygon(6, 585 + 304, 586 + 304, 590 + 304, 589 + 304);
@@ -2165,7 +2165,7 @@ void colorcube112()
 }
 void colorcube113()
 {
-	polygon(back[1][1], 584 + 312, 587 + 312, 586 + 312, 585 + 312);
+	polygon(back[3][3], 584 + 312, 587 + 312, 586 + 312, 585 + 312);
 	polygon(6, 586 + 312, 587 + 312, 591 + 312, 590 + 312);
 	polygon(6, 584 + 312, 588 + 312, 591 + 312, 587 + 312); // front 2 center right
 	polygon(6, 585 + 312, 586 + 312, 590 + 312, 589 + 312);
@@ -2174,7 +2174,7 @@ void colorcube113()
 }
 void colorcube114()
 {
-	polygon(back[1][1], 584 + 320, 587 + 320, 586 + 320, 585 + 320);
+	polygon(back[3][2], 584 + 320, 587 + 320, 586 + 320, 585 + 320);
 	polygon(6, 586 + 320, 587 + 320, 591 + 320, 590 + 320);
 	polygon(6, 584 + 320, 588 + 320, 591 + 320, 587 + 320); // front 2 center right
 	polygon(6, 585 + 320, 586 + 320, 590 + 320, 589 + 320);
@@ -2183,7 +2183,7 @@ void colorcube114()
 }
 void colorcube115()
 {
-	polygon(back[1][1], 584 + 328, 587 + 328, 586 + 328, 585 + 328);
+	polygon(back[3][1], 584 + 328, 587 + 328, 586 + 328, 585 + 328);
 	polygon(6, 586 + 328, 587 + 328, 591 + 328, 590 + 328);
 	polygon(6, 584 + 328, 588 + 328, 591 + 328, 587 + 328); // front 2 center right
 	polygon(6, 585 + 328, 586 + 328, 590 + 328, 589 + 328);
@@ -2192,21 +2192,21 @@ void colorcube115()
 }
 void colorcube116()
 {
-	polygon(back[1][1], 584 + 336, 587 + 336, 586 + 336, 585 + 336);
+	polygon(back[4][1], 584 + 336, 587 + 336, 586 + 336, 585 + 336);
 	polygon(6, 586 + 336, 587 + 336, 591 + 336, 590 + 336);
 	polygon(6, 584 + 336, 588 + 336, 591 + 336, 587 + 336); // front 2 center right
 	polygon(6, 585 + 336, 586 + 336, 590 + 336, 589 + 336);
 	polygon(6, 588 + 336, 589 + 336, 590 + 336, 591 + 336);
-	polygon(bottom[1][1], 584 + 336, 585 + 336, 589 + 336, 588 + 336);
+	polygon(bottom[4][3], 584 + 336, 585 + 336, 589 + 336, 588 + 336);
 }
 void colorcube117()
 {
-	polygon(back[1][1], 584 + 344, 587 + 344, 586 + 344, 585 + 344);
+	polygon(back[4][3], 584 + 344, 587 + 344, 586 + 344, 585 + 344);
 	polygon(6, 586 + 344, 587 + 344, 591 + 344, 590 + 344);
 	polygon(6, 584 + 344, 588 + 344, 591 + 344, 587 + 344); // front 2 center right
 	polygon(6, 585 + 344, 586 + 344, 590 + 344, 589 + 344);
 	polygon(6, 588 + 344, 589 + 344, 590 + 344, 591 + 344);
-	polygon(bottom[1][1], 584 + 344, 585 + 344, 589 + 344, 588 + 344);
+	polygon(bottom[4][1], 584 + 344, 585 + 344, 589 + 344, 588 + 344);
 }
 void colorcube118()
 {
@@ -2215,7 +2215,7 @@ void colorcube118()
 	polygon(6, 584 + 352, 588 + 352, 591 + 352, 587 + 352); // front 2 center right
 	polygon(6, 585 + 352, 586 + 352, 590 + 352, 589 + 352);
 	polygon(6, 588 + 352, 589 + 352, 590 + 352, 591 + 352);
-	polygon(bottom[1][1], 584 + 352, 585 + 352, 589 + 352, 588 + 352);
+	polygon(bottom[1][2], 584 + 352, 585 + 352, 589 + 352, 588 + 352);
 }
 void colorcube119()
 {
@@ -2224,7 +2224,7 @@ void colorcube119()
 	polygon(6, 584 + 360, 588 + 360, 591 + 360, 587 + 360); // front 2 center right
 	polygon(6, 585 + 360, 586 + 360, 590 + 360, 589 + 360);
 	polygon(6, 588 + 360, 589 + 360, 590 + 360, 591 + 360);
-	polygon(bottom[1][1], 584 + 360, 585 + 360, 589 + 360, 588 + 360);
+	polygon(bottom[1][3], 584 + 360, 585 + 360, 589 + 360, 588 + 360);
 }
 void colorcube120()
 {
@@ -2233,7 +2233,7 @@ void colorcube120()
 	polygon(6, 584 + 368, 588 + 368, 591 + 368, 587 + 368); // front 2 center right
 	polygon(6, 585 + 368, 586 + 368, 590 + 368, 589 + 368);
 	polygon(6, 588 + 368, 589 + 368, 590 + 368, 591 + 368);
-	polygon(bottom[1][1], 584 + 368, 585 + 368, 589 + 368, 588 + 368);
+	polygon(bottom[2][3], 584 + 368, 585 + 368, 589 + 368, 588 + 368);
 }
 void colorcube121()
 {
@@ -2242,7 +2242,7 @@ void colorcube121()
 	polygon(6, 584 + 376, 588 + 376, 591 + 376, 587 + 376); // front 2 center right
 	polygon(6, 585 + 376, 586 + 376, 590 + 376, 589 + 376);
 	polygon(6, 588 + 376, 589 + 376, 590 + 376, 591 + 376);
-	polygon(bottom[1][1], 584 + 376, 585 + 376, 589 + 376, 588 + 376);
+	polygon(bottom[3][3], 584 + 376, 585 + 376, 589 + 376, 588 + 376);
 }
 void colorcube122()
 {
@@ -2251,7 +2251,7 @@ void colorcube122()
 	polygon(6, 584 + 384, 588 + 384, 591 + 384, 587 + 384); // front 2 center right
 	polygon(6, 585 + 384, 586 + 384, 590 + 384, 589 + 384);
 	polygon(6, 588 + 384, 589 + 384, 590 + 384, 591 + 384);
-	polygon(bottom[1][1], 584 + 384, 585 + 384, 589 + 384, 588 + 384);
+	polygon(bottom[3][2], 584 + 384, 585 + 384, 589 + 384, 588 + 384);
 }
 void colorcube123()
 {
@@ -2260,7 +2260,7 @@ void colorcube123()
 	polygon(6, 584 + 392, 588 + 392, 591 + 392, 587 + 392); // front 2 center right
 	polygon(6, 585 + 392, 586 + 392, 590 + 392, 589 + 392);
 	polygon(6, 588 + 392, 589 + 392, 590 + 392, 591 + 392);
-	polygon(bottom[1][1], 584 + 392, 585 + 392, 589 + 392, 588 + 392);
+	polygon(bottom[3][1], 584 + 392, 585 + 392, 589 + 392, 588 + 392);
 }
 void colorcube124()
 {
@@ -2269,7 +2269,7 @@ void colorcube124()
 	polygon(6, 584 + 400, 588 + 400, 591 + 400, 587 + 400); // front 2 center right
 	polygon(6, 585 + 400, 586 + 400, 590 + 400, 589 + 400);
 	polygon(6, 588 + 400, 589 + 400, 590 + 400, 591 + 400);
-	polygon(bottom[1][1], 584 + 400, 585 + 400, 589 + 400, 588 + 400);
+	polygon(bottom[2][1], 584 + 400, 585 + 400, 589 + 400, 588 + 400);
 }
 void colorcube125()
 {
@@ -2336,6 +2336,134 @@ void display()
 	glRotatef(0.0 + r, 0.0, 0.0, 1.0);
 	if (rotation == 0)
 	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+	}
+	if (rotation == 1)
+	{
 		colorcube1();
 		colorcube2();
 		colorcube3();
@@ -2366,21 +2494,12 @@ void display()
 		colorcube28();
 		colorcube29();
 		colorcube30();
-		colorcube31();
 		colorcube32();
 		colorcube33();
-		colorcube34();
-		colorcube35();
-		colorcube36();
-		colorcube37();
 		colorcube38();
 		colorcube39();
 		colorcube40();
 		colorcube41();
-		colorcube42();
-		colorcube43();
-		colorcube44();
-		colorcube45();
 		colorcube46();
 		colorcube47();
 		colorcube48();
@@ -2389,22 +2508,6 @@ void display()
 		colorcube51();
 		colorcube52();
 		colorcube53();
-		colorcube54();
-		colorcube55();
-		colorcube56();
-		colorcube57();
-		colorcube58();
-		colorcube59();
-		colorcube60();
-		colorcube61();
-		colorcube62();
-		colorcube63();
-		colorcube64();
-		colorcube65();
-		colorcube66();
-		colorcube67();
-		colorcube68();
-		colorcube69();
 		colorcube70();
 		colorcube71();
 		colorcube72();
@@ -2461,27 +2564,6 @@ void display()
 		colorcube123();
 		colorcube124();
 		colorcube125();
-	}
-	if (rotation == 1)
-	{
-		colorcube1();
-		colorcube2();
-		colorcube3();
-		colorcube4();
-		colorcube6();
-		colorcube7();
-		colorcube12();
-		colorcube13();
-		colorcube14();
-		colorcube15();
-		colorcube20();
-		colorcube21();
-		colorcube22();
-		colorcube23();
-		colorcube24();
-		colorcube25();
-		colorcube26();
-		colorcube27();
 		if (inverse == 0)
 		{
 			glRotatef(-theta, 0.0, 1.0, 0.0);
@@ -2490,35 +2572,133 @@ void display()
 		{
 			glRotatef(theta, 0.0, 1.0, 0.0);
 		}
-		colorcube5();
-		colorcube8();
-		colorcube9();
-		colorcube10();
-		colorcube11();
-		colorcube16();
-		colorcube17();
-		colorcube18();
-		colorcube19();
+		colorcube31();
+		colorcube34();
+		colorcube35();
+		colorcube36();
+		colorcube37();
+		colorcube42();
+		colorcube43();
+		colorcube44();
+		colorcube45();
+		colorcube54();
+		colorcube55();
+		colorcube56();
+		colorcube57();
+		colorcube58();
+		colorcube59();
+		colorcube60();
+		colorcube61();
+		colorcube62();
+		colorcube63();
+		colorcube64();
+		colorcube65();
+		colorcube66();
+		colorcube67();
+		colorcube68();
+		colorcube69();
 	}if (rotation == 2)
 	{
 		colorcube1();
 		colorcube2();
 		colorcube3();
+		colorcube4();
 		colorcube5();
 		colorcube6();
 		colorcube7();
 		colorcube8();
+		colorcube9();
 		colorcube10();
 		colorcube11();
 		colorcube12();
+		colorcube13();
 		colorcube14();
 		colorcube15();
 		colorcube16();
 		colorcube17();
+		colorcube18();
+		colorcube19();
 		colorcube20();
 		colorcube21();
+		colorcube22();
+		colorcube23();
 		colorcube24();
 		colorcube25();
+		colorcube26();
+		colorcube27();
+		colorcube28();
+		colorcube29();
+		colorcube31();
+		colorcube32();
+		colorcube33();
+		colorcube34();
+		colorcube36();
+		colorcube37();
+		colorcube38();
+		colorcube40();
+		colorcube41();
+		colorcube42();
+		colorcube43();
+		colorcube46();
+		colorcube47();
+		colorcube50();
+		colorcube51();
+		colorcube54();
+		colorcube55();
+		colorcube56();
+		colorcube57();
+		colorcube58();
+		colorcube59();
+		colorcube60();
+		colorcube61();
+		colorcube62();
+		colorcube63();
+		colorcube66();
+		colorcube67();
+		colorcube68();
+		colorcube69();
+		colorcube70();
+		colorcube71();
+		colorcube72();
+		colorcube73();
+		colorcube74();
+		colorcube75();
+		colorcube76();
+		colorcube77();
+		colorcube78();
+		colorcube79();
+		colorcube82();
+		colorcube83();
+		colorcube96();
+		colorcube97();
+		colorcube98();
+		colorcube99();
+		colorcube100();
+		colorcube101();
+		colorcube102();
+		colorcube103();
+		colorcube104();
+		colorcube105();
+		colorcube106();
+		colorcube107();
+		colorcube108();
+		colorcube109();
+		colorcube110();
+		colorcube111();
+		colorcube112();
+		colorcube113();
+		colorcube114();
+		colorcube115();
+		colorcube116();
+		colorcube117();
+		colorcube118();
+		colorcube119();
+		colorcube120();
+		colorcube121();
+		colorcube122();
+		colorcube123();
+		colorcube124();
+		colorcube125();
 		if (inverse == 0)
 		{
 			glRotatef(-theta, 1.0, 0.0, 0.0);
@@ -2527,15 +2707,31 @@ void display()
 		{
 			glRotatef(theta, 1.0, 0.0, 0.0);
 		}
-		colorcube4();
-		colorcube9();
-		colorcube13();
-		colorcube18();
-		colorcube19();
-		colorcube22();
-		colorcube23();
-		colorcube26();
-		colorcube27();
+		colorcube30();
+		colorcube35();
+		colorcube39();
+		colorcube44();
+		colorcube45();
+		colorcube48();
+		colorcube49();
+		colorcube52();
+		colorcube53();
+		colorcube64();
+		colorcube65();
+		colorcube80();
+		colorcube81();
+		colorcube84();
+		colorcube85();
+		colorcube86();
+		colorcube87();
+		colorcube88();
+		colorcube89();
+		colorcube90();
+		colorcube91();
+		colorcube92();
+		colorcube93();
+		colorcube94();
+		colorcube95();
 	}if (rotation == 3)
 	{
 		colorcube1();
@@ -2543,19 +2739,101 @@ void display()
 		colorcube3();
 		colorcube4();
 		colorcube5();
+		colorcube6();
 		colorcube7();
 		colorcube8();
 		colorcube9();
+		colorcube10();
 		colorcube11();
 		colorcube12();
 		colorcube13();
+		colorcube14(); 
 		colorcube15();
 		colorcube16();
+		colorcube17();
 		colorcube18();
+		colorcube19();
 		colorcube20();
+		colorcube21();
 		colorcube22();
+		colorcube23();
 		colorcube24();
+		colorcube25();
 		colorcube26();
+		colorcube27();
+		colorcube28();
+		colorcube29();
+		colorcube30();
+		colorcube31();
+		colorcube33();
+		colorcube34();
+		colorcube35();
+		colorcube37(); 
+		colorcube38();
+		colorcube39();
+		colorcube41();
+		colorcube42();
+		colorcube44();
+		colorcube46();
+		colorcube48();
+		colorcube50();
+		colorcube52();
+		colorcube54(); 
+		colorcube55();
+		colorcube56();
+		colorcube57();
+		colorcube58();
+		colorcube59();
+		colorcube60();
+		colorcube61();
+		colorcube62();
+		colorcube63();
+		colorcube64();
+		colorcube65();
+		colorcube68();
+		colorcube69();
+		colorcube84();
+		colorcube85();
+		colorcube86();
+		colorcube87();
+		colorcube88();
+		colorcube89();
+		colorcube90();
+		colorcube91();
+		colorcube92();
+		colorcube93();
+		colorcube94();
+		colorcube95();
+		colorcube96();
+		colorcube97();
+		colorcube98();
+		colorcube99();
+		colorcube100();
+		colorcube101();
+		colorcube102();
+		colorcube103();
+		colorcube104();
+		colorcube105();
+		colorcube106();
+		colorcube107();
+		colorcube108();
+		colorcube109();
+		colorcube110();
+		colorcube111();
+		colorcube112();
+		colorcube113();
+		colorcube114();
+		colorcube115();
+		colorcube116();
+		colorcube117();
+		colorcube118();
+		colorcube119();
+		colorcube120();
+		colorcube121();
+		colorcube122();
+		colorcube123();
+		colorcube124();
+		colorcube125();
 		if (inverse == 0)
 		{
 			glRotatef(-theta, 0.0, 0.0, 1.0);
@@ -2564,35 +2842,133 @@ void display()
 		{
 			glRotatef(theta, 0.0, 0.0, 1.0);
 		}
-		colorcube6();
-		colorcube10();
-		colorcube14();
-		colorcube17();
-		colorcube19();
-		colorcube21();
-		colorcube23();
-		colorcube25();
-		colorcube27();
+		colorcube32();// xanh duong trung tam
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube43();// trang do xanh duong
+		colorcube45();// trang xanh duong cam
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube51();// xanh duong do ngoai cung ben trai
+		colorcube53();// cam xanh duong ngoai cung ben trai
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
 	}
 	if (rotation == 4) {
-		colorcube1();
-		colorcube2();
-		colorcube4();
-		colorcube5();
-		colorcube6();
-		colorcube7();
-		colorcube9();
-		colorcube10();
-		colorcube11();
-		colorcube13();
-		colorcube14();
-		colorcube15();
-		colorcube18();
-		colorcube19();
-		colorcube22();
-		colorcube23();
-		colorcube26();
-		colorcube27();
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube52();// cam xanh la ngoai cung ben phai
+		colorcube53();// cam xanh duong ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
 		if (inverse == 0)
 		{
 			glRotatef(theta, 1.0, 0.0, 0.0);
@@ -2601,36 +2977,134 @@ void display()
 		{
 			glRotatef(-theta, 1.0, 0.0, 0.0);
 		}
-		colorcube3();
-		colorcube8();
-		colorcube12();
-		colorcube16();
-		colorcube17();
-		colorcube20();
-		colorcube21();
-		colorcube24();
-		colorcube25();
+		colorcube29();// do trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube50();// do xanh la ngoai cung ben trai
+		colorcube51();// xanh duong do ngoai cung ben trai
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
 	}
 	if (rotation == 5)
 	{
-		colorcube1();
-		colorcube2();
-		colorcube3();
-		colorcube4();
-		colorcube5();
-		colorcube6();
-		colorcube8();
-		colorcube9();
-		colorcube10();
-		colorcube12();
-		colorcube13();
-		colorcube14();
-		colorcube17();
-		colorcube19();
-		colorcube21();
-		colorcube23();
-		colorcube25();
-		colorcube27();
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube43();// trang do xanh duong
+		colorcube45();// trang xanh duong cam
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube51();// xanh duong do ngoai cung ben trai
+		colorcube53();// cam xanh duong ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
 		if (inverse == 0)
 		{
 			glRotatef(theta, 0.0, 0.0, 1.0);
@@ -2639,36 +3113,134 @@ void display()
 		{
 			glRotatef(-theta, 0.0, 0.0, 1.0);
 		}
-		colorcube7();
-		colorcube11();
-		colorcube15();
-		colorcube16();
-		colorcube18();
-		colorcube20();
-		colorcube22();
-		colorcube24();
-		colorcube26();
+		colorcube33();// xanh la trung tam
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube44();// trang xanh la cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube50();// do xanh la ngoai cung ben trai
+		colorcube52();// cam xanh la ngoai cung ben phai
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
 	}
 	if (rotation == 6)
 	{
-		colorcube1();
-		colorcube3();
-		colorcube4();
-		colorcube5();
-		colorcube6();
-		colorcube7();
-		colorcube8();
-		colorcube9();
-		colorcube10();
-		colorcube11();
-		colorcube16();
-		colorcube17();
-		colorcube18();
-		colorcube19();
-		colorcube20();
-		colorcube21();
-		colorcube22();
-		colorcube23();
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
 		if (inverse == 0)
 		{
 			glRotatef(theta, 0.0, 1.0, 0.0);
@@ -2677,15 +3249,31 @@ void display()
 		{
 			glRotatef(-theta, 0.0, 1.0, 0.0);
 		}
-		colorcube2();
-		colorcube12();
-		colorcube13();
-		colorcube14();
-		colorcube15();
-		colorcube24();
-		colorcube25();
-		colorcube26();
-		colorcube27();
+		colorcube28();// vang trung tam
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube50();// do xanh la ngoai cung ben trai
+		colorcube51();// xanh duong do ngoai cung ben trai
+		colorcube52();// cam xanh la ngoai cung ben phai
+		colorcube53();// cam xanh duong ngoai cung ben trai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
 	}
 	
 	glPopMatrix();
@@ -2769,84 +3357,163 @@ void transpose(char a)
 {
 	if (a == 'r')
 	{
-		int temp;
-		temp = fright[0][0];
-		fright[0][0] = fright[2][0];
-		fright[2][0] = fright[2][2];
-		fright[2][2] = fright[0][2];
-		fright[0][2] = temp;
-		temp = fright[1][0];
-		fright[1][0] = fright[2][1];
-		fright[2][1] = fright[1][2];
-		fright[1][2] = fright[0][1];
-		fright[0][1] = temp;
+		// int temp;
+		// temp = fright[0][0];
+		// fright[0][0] = fright[2][0];
+		// fright[2][0] = fright[2][2];
+		// fright[2][2] = fright[0][2];
+		// fright[0][2] = temp;
+		// temp = fright[1][0];
+		// fright[1][0] = fright[2][1];
+		// fright[2][1] = fright[1][2];
+		// fright[1][2] = fright[0][1];
+		// fright[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = fright[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				fright[i][j] = temp[i][j];
+			}
+		}
 	}
 	if (a == 't') {
-		int temp;
-		temp = top[0][0];
-		top[0][0] = top[2][0];
-		top[2][0] = top[2][2];
-		top[2][2] = top[0][2];
-		top[0][2] = temp;
-		temp = top[1][0];
-		top[1][0] = top[2][1];
-		top[2][1] = top[1][2];
-		top[1][2] = top[0][1];
-		top[0][1] = temp;
+		// int temp;
+		// temp = top[0][0];
+		// top[0][0] = top[2][0];
+		// top[2][0] = top[2][2];
+		// top[2][2] = top[0][2];
+		// top[0][2] = temp;
+		// temp = top[1][0];
+		// top[1][0] = top[2][1];
+		// top[2][1] = top[1][2];
+		// top[1][2] = top[0][1];
+		// top[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = top[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				top[i][j] = temp[i][j];
+			}
+		}
 	}
 	if (a == 'f')
 	{
-		int temp;
-		temp = front[0][0];
-		front[0][0] = front[2][0];
-		front[2][0] = front[2][2];
-		front[2][2] = front[0][2];
-		front[0][2] = temp;
-		temp = front[1][0];
-		front[1][0] = front[2][1];
-		front[2][1] = front[1][2];
-		front[1][2] = front[0][1]; front[0][1] = temp;
+		// int temp;
+		// temp = front[0][0];
+		// front[0][0] = front[2][0];
+		// front[2][0] = front[2][2];
+		// front[2][2] = front[0][2];
+		// front[0][2] = temp;
+		// temp = front[1][0];
+		// front[1][0] = front[2][1];
+		// front[2][1] = front[1][2];
+		// front[1][2] = front[0][1];
+		// front[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = front[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				front[i][j] = temp[i][j];
+			}
+		}
 	}
 	if (a == 'l')
 	{
-		int temp;
-		temp = fleft[0][0];
-		fleft[0][0] = fleft[2][0];
-		fleft[2][0] = fleft[2][2];
-		fleft[2][2] = fleft[0][2];
-		fleft[0][2] = temp;
-		temp = fleft[1][0];
-		fleft[1][0] = fleft[2][1];
-		fleft[2][1] = fleft[1][2];
-		fleft[1][2] = fleft[0][1];
-		fleft[0][1] = temp;
+		// int temp;
+		// temp = fleft[0][0];
+		// fleft[0][0] = fleft[2][0];
+		// fleft[2][0] = fleft[2][2];
+		// fleft[2][2] = fleft[0][2];
+		// fleft[0][2] = temp;
+		// temp = fleft[1][0];
+		// fleft[1][0] = fleft[2][1];
+		// fleft[2][1] = fleft[1][2];
+		// fleft[1][2] = fleft[0][1];
+		// fleft[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = fleft[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				fleft[i][j] = temp[i][j];
+			}
+		}
 	}
 	if (a == 'k')
 	{
-		int temp;
-		temp = back[0][0];
-		back[0][0] = back[2][0];
-		back[2][0] = back[2][2];
-		back[2][2] = back[0][2];
-		back[0][2] = temp;
-		temp = back[1][0]; back[1][0] = back[2][1];
-		back[2][1] = back[1][2];
-		back[1][2] = back[0][1];
-		back[0][1] = temp;
+		// int temp;
+		// temp = back[0][0];
+		// back[0][0] = back[2][0];
+		// back[2][0] = back[2][2];
+		// back[2][2] = back[0][2];
+		// back[0][2] = temp;
+		// temp = back[1][0]; back[1][0] = back[2][1];
+		// back[2][1] = back[1][2];
+		// back[1][2] = back[0][1];
+		// back[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = back[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				back[i][j] = temp[i][j];
+			}
+		}
 	}
 	if (a == 'b')
 	{
-		int temp;
-		temp = bottom[0][0];
-		bottom[0][0] = bottom[2][0];
-		bottom[2][0] = bottom[2][2];
-		bottom[2][2] = bottom[0][2];
-		bottom[0][2] = temp;
-		temp = bottom[1][0];
-		bottom[1][0] = bottom[2][1];
-		bottom[2][1] = bottom[1][2];
-		bottom[1][2] = bottom[0][1];
-		bottom[0][1] = temp;
+		// int temp;
+		// temp = bottom[0][0];
+		// bottom[0][0] = bottom[2][0];
+		// bottom[2][0] = bottom[2][2];
+		// bottom[2][2] = bottom[0][2];
+		// bottom[0][2] = temp;
+		// temp = bottom[1][0];
+		// bottom[1][0] = bottom[2][1];
+		// bottom[2][1] = bottom[1][2];
+		// bottom[1][2] = bottom[0][1];
+		// bottom[0][1] = temp;
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = bottom[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				bottom[i][j] = temp[i][j];
+			}
+		}
 	}
 }
 void topc()
@@ -2855,55 +3522,86 @@ void topc()
 	int temp1 = front[0][0];
 	int temp2 = front[0][1];
 	int temp3 = front[0][2];
+	int temp4 = front[0][3];
+	int temp5 = front[0][4];
 	front[0][0] = fright[0][0];
 	front[0][1] = fright[0][1];
 	front[0][2] = fright[0][2];
+	front[0][3] = fright[0][3];
+	front[0][4] = fright[0][4];
 	fright[0][0] = back[0][0];
 	fright[0][1] = back[0][1];
 	fright[0][2] = back[0][2];
+	fright[0][3] = back[0][3];
+	fright[0][4] = back[0][4];
 	back[0][0] = fleft[0][0];
 	back[0][1] = fleft[0][1];
 	back[0][2] = fleft[0][2];
+	back[0][3] = fleft[0][3];
+	back[0][4] = fleft[0][4];
 	fleft[0][0] = temp1;
 	fleft[0][1] = temp2;
 	fleft[0][2] = temp3;
+	fleft[0][3] = temp4;
+	fleft[0][4] = temp5;
 }
 void frontc()
 {
 	transpose('f');
-	int temp1 = fleft[0][2];
-	int temp2 = fleft[1][2];
-	int temp3 = fleft[2][2];
-	fleft[0][2] = bottom[0][0];
-	fleft[1][2] = bottom[0][1];
-	fleft[2][2] = bottom[0][2];
-	bottom[0][0] = fright[2][0];
-	bottom[0][1] = fright[1][0];
-	bottom[0][2] = fright[0][0];
-	fright[2][0] = top[2][2];
-	fright[1][0] = top[2][1];
-	fright[0][0] = top[2][0];
-	top[2][2] = temp1;
-	top[2][1] = temp2;
-	top[2][0] = temp3;
+	int temp1 = fleft[0][4];
+	int temp2 = fleft[1][4];
+	int temp3 = fleft[2][4];
+	int temp4 = fleft[3][4];
+	int temp5 = fleft[4][4];
+	fleft[0][4] = bottom[0][0];
+	fleft[1][4] = bottom[0][1];
+	fleft[2][4] = bottom[0][2];
+	fleft[3][4] = bottom[0][3];
+	fleft[4][4] = bottom[0][4];
+	bottom[0][0] = fright[4][0];
+	bottom[0][1] = fright[3][0];
+	bottom[0][2] = fright[2][0];
+	bottom[0][3] = fright[1][0];
+	bottom[0][4] = fright[0][0];
+	fright[4][0] = top[4][4];
+	fright[3][0] = top[4][3];
+	fright[2][0] = top[4][2];
+	fright[1][0] = top[4][1];
+	fright[0][0] = top[4][0];
+	top[4][4] = temp1;
+	top[4][3] = temp2;
+	top[4][2] = temp3;
+	top[4][1] = temp4;
+	top[4][0] = temp5;
 }
 void rightc()
 {
-	transpose('r'); int temp1 = top[0][2];
-	int temp2 = top[1][2];
-	int temp3 = top[2][2];
-	top[0][2] = front[0][2];
-	top[1][2] = front[1][2];
-	top[2][2] = front[2][2];
-	front[0][2] = bottom[0][2];
-	front[1][2] = bottom[1][2];
-	front[2][2] = bottom[2][2];
-	bottom[0][2] = back[2][0];
-	bottom[1][2] = back[1][0];
-	bottom[2][2] = back[0][0];
-	back[2][0] = temp1;
-	back[1][0] = temp2;
-	back[0][0] = temp3;
+	transpose('r');
+	int temp1 = top[0][4];
+	int temp2 = top[1][4];
+	int temp3 = top[2][4];
+	int temp4 = top[3][4];
+	int temp5 = top[4][4];
+	top[0][4] = front[0][4];
+	top[1][4] = front[1][4];
+	top[2][4] = front[2][4];
+	top[3][4] = front[3][4];
+	top[4][4] = front[4][4];
+	front[0][4] = bottom[0][4];
+	front[1][4] = bottom[1][4];
+	front[2][4] = bottom[2][4];
+	front[3][4] = bottom[3][4];
+	front[4][4] = bottom[4][4];
+	bottom[0][4] = back[4][0];
+	bottom[1][4] = back[3][0];
+	bottom[2][4] = back[2][0];
+	bottom[3][4] = back[1][0];
+	bottom[4][4] = back[0][0];
+	back[4][0] = temp1;
+	back[3][0] = temp2;
+	back[2][0] = temp3;
+	back[1][0] = temp4;
+	back[0][0] = temp5;
 }
 void leftc()
 {
@@ -2911,18 +3609,28 @@ void leftc()
 	int temp1 = front[0][0];
 	int temp2 = front[1][0];
 	int temp3 = front[2][0];
+	int temp4 = front[3][0];
+	int temp5 = front[4][0];
 	front[0][0] = top[0][0];
 	front[1][0] = top[1][0];
 	front[2][0] = top[2][0];
-	top[0][0] = back[2][2];
-	top[1][0] = back[1][2];
-	top[2][0] = back[0][2];
-	back[2][2] = bottom[0][0];
-	back[1][2] = bottom[1][0];
-	back[0][2] = bottom[2][0];
+	front[3][0] = top[3][0];
+	front[4][0] = top[4][0];
+	top[0][0] = back[4][4];
+	top[1][0] = back[3][4];
+	top[2][0] = back[2][4];
+	top[3][0] = back[1][4];
+	top[4][0] = back[0][4];
+	back[4][4] = bottom[0][0];
+	back[3][4] = bottom[1][0];
+	back[2][4] = bottom[2][0];
+	back[1][4] = bottom[3][0];
+	back[0][4] = bottom[4][0];
 	bottom[0][0] = temp1;
 	bottom[1][0] = temp2;
 	bottom[2][0] = temp3;
+	bottom[3][0] = temp4;
+	bottom[4][0] = temp5;
 }
 void backc()
 {
@@ -2930,37 +3638,57 @@ void backc()
 	int temp1 = top[0][0];
 	int temp2 = top[0][1];
 	int temp3 = top[0][2];
-	top[0][0] = fright[0][2];
-	top[0][1] = fright[1][2];
-	top[0][2] = fright[2][2];
-	fright[0][2] = bottom[2][2];
-	fright[1][2] = bottom[2][1];
-	fright[2][2] = bottom[2][0];
-	bottom[2][2] = fleft[2][0];
-	bottom[2][1] = fleft[1][0];
-	bottom[2][0] = fleft[0][0];
-	fleft[2][0] = temp1;
-	fleft[1][0] = temp2;
-	fleft[0][0] = temp3;
+	int temp4 = top[0][3];
+	int temp5 = top[0][4];
+	top[0][0] = fright[0][4];
+	top[0][1] = fright[1][4];
+	top[0][2] = fright[2][4];
+	top[0][3] = fright[3][4];
+	top[0][4] = fright[4][4];
+	fright[0][4] = bottom[4][4];
+	fright[1][4] = bottom[4][3];
+	fright[2][4] = bottom[4][2];
+	fright[3][4] = bottom[4][1];
+	fright[4][4] = bottom[4][0];
+	bottom[4][4] = fleft[4][0];
+	bottom[4][3] = fleft[3][0];
+	bottom[4][2] = fleft[2][0];
+	bottom[4][1] = fleft[1][0];
+	bottom[4][0] = fleft[0][0];
+	fleft[4][0] = temp1;
+	fleft[3][0] = temp2;
+	fleft[2][0] = temp3;
+	fleft[1][0] = temp4;
+	fleft[0][0] = temp5;
 }
 void bottomc()
 {
 	transpose('b');
-	int temp1 = front[2][0];
-	int temp2 = front[2][1];
-	int temp3 = front[2][2];
-	front[2][0] = fleft[2][0];
-	front[2][1] = fleft[2][1];
-	front[2][2] = fleft[2][2];
-	fleft[2][0] = back[2][0];
-	fleft[2][1] = back[2][1];
-	fleft[2][2] = back[2][2];
-	back[2][0] = fright[2][0];
-	back[2][1] = fright[2][1];
-	back[2][2] = fright[2][2];
-	fright[2][0] = temp1;
-	fright[2][1] = temp2;
-	fright[2][2] = temp3;
+	int temp1 = front[4][0];
+	int temp2 = front[4][1];
+	int temp3 = front[4][2];
+	int temp4 = front[4][3];
+	int temp5 = front[4][4];
+	front[4][0] = fleft[4][0];
+	front[4][1] = fleft[4][1];
+	front[4][2] = fleft[4][2];
+	front[4][3] = fleft[4][3];
+	front[4][4] = fleft[4][4];
+	fleft[4][0] = back[4][0];
+	fleft[4][1] = back[4][1];
+	fleft[4][2] = back[4][2];
+	fleft[4][3] = back[4][3];
+	fleft[4][4] = back[4][4];
+	back[4][0] = fright[4][0];
+	back[4][1] = fright[4][1];
+	back[4][2] = fright[4][2];
+	back[4][3] = fright[4][3];
+	back[4][4] = fright[4][4];
+	fright[4][0] = temp1;
+	fright[4][1] = temp2;
+	fright[4][2] = temp3;
+	fright[4][3] = temp4;
+	fright[4][4] = temp5;
 }
 void spincube() {
 	theta += 0.5 + speed;
