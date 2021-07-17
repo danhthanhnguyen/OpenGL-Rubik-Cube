@@ -3275,6 +3275,822 @@ void display()
 		colorcube124();// vang
 		colorcube125();// vang
 	}
+	if (rotation == 7)
+	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube96();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube108();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+		if (inverse == 0)
+		{
+			glRotatef(-theta, 0.0, 1.0, 0.0);
+		}
+		else
+		{
+			glRotatef(theta, 0.0, 1.0, 0.0);
+		}
+		colorcube5();// top 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube95();// cam xanh la
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube105();// do xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+	}
+	if (rotation == 8)
+	{
+		colorcube1();// center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+		if (inverse == 0)
+		{
+			glRotatef(-theta, 0.0, 1.0, 0.0);
+		}
+		else
+		{
+			glRotatef(theta, 0.0, 1.0, 0.0);
+		}
+		colorcube2();// bottom 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube81();// xanh duong cam phai
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube94();// cam xanh la
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+	}
+	if (rotation == 9)
+	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		if (inverse == 0)
+		{
+			glRotatef(theta, 1.0, 0.0, 0.0);
+		}
+		else
+		{
+			glRotatef(-theta, 1.0, 0.0, 0.0);
+		}
+		colorcube3();// left 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube54();// trang giua ben trai
+		colorcube58();// trang trai phia sau
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube77();// xanh duong trai duoi
+		colorcube83();// xanh duong vang
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube117();// xanh la vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+	}
+	if (rotation == 10)
+	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube17();// top 1 front 1 left
+		colorcube20();// left 1 back 1 center
+		colorcube21();// front 1 left 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube25();// front 1 left 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube57();// trang giua phia truoc
+		colorcube58();// trang trai phia sau
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoctruoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube107();// do vang
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+		if (inverse == 0)
+		{
+			glRotatef(-theta, 1.0, 0.0, 0.0);
+		}
+		else
+		{
+			glRotatef(theta, 1.0, 0.0, 0.0);
+		}
+		colorcube4();// right 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube18();// top 1 back 1 right
+		colorcube19();// top 1 front 1 right
+		colorcube22();// right 1 back 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube26();// right 1 back 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube56();// trang giua ben phai
+		colorcube59();// trang phai phia sau
+		colorcube60();// trang phai phia truoc
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube66();// trang xanh duong phai ngoai cung phia 
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube82();// xanh duong vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube121();// vang
+	}
+	if (rotation == 11)
+	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube7();// back 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube55();// trang tren phia sau
+		colorcube56();// trang giua ben phai
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube89();// cam
+		colorcube93();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube96();// do
+		colorcube97();// do
+		colorcube98();// do
+		colorcube102();// do
+		colorcube103();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube106();// do vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube120();// vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+		colorcube124();// vang
+		if (inverse == 0)
+		{
+			glRotatef(-theta, 0.0, 0.0, 1.0);
+		}
+		else
+		{
+			glRotatef(theta, 0.0, 0.0, 1.0);
+		}
+		colorcube6();// front 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube17();// top 1 front 1 left
+		colorcube19();// top 1 front 1 right
+		colorcube21();// front 1 left 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube25();// front 1 left 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube57();// trang giua phia truoc
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube85();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube107();// do vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube125();// vang
+	}
+	if (rotation == 12)
+	{
+		colorcube1();// center
+		colorcube2();// bottom 1 center
+		colorcube3();// left 1 center
+		colorcube4();// right 1 center
+		colorcube5();// top 1 center
+		colorcube6();// front 1 center
+		colorcube8();// top 1 left 1 center
+		colorcube9();// top 1 right 1 center
+		colorcube10();// top 1 front 1 center
+		colorcube12();// left 1 bottom 1 center
+		colorcube13();// right 1 bottom 1 center
+		colorcube14();// front 1 bottom 1 center
+		colorcube17();// top 1 front 1 left
+		colorcube19();// top 1 front 1 right
+		colorcube21();// front 1 left 1 center
+		colorcube23();// front 1 right 1 center
+		colorcube25();// front 1 left 1 bottom
+		colorcube27();// front 1 right 1 bottom
+		colorcube28();// vang trung tam
+		colorcube29();// do trung tam
+		colorcube30();// cam trung tam
+		colorcube31();// trang trung tam
+		colorcube32();// xanh duong trung tam
+		colorcube33();// xanh la trung tam
+		colorcube34();// trang do ngoai cung ben trai
+		colorcube35();// trang cam ngoai cung be phai
+		colorcube36();// trang xanh duong ngoai cung phia truoc
+		colorcube37();// trang xanh la ngoai cung phia sau
+		colorcube38();// do vang ngoai cung phia duoi
+		colorcube39();// cam vang ngoai cung phia duoi
+		colorcube40();// xanh duong vang ngoai cung phia duoi
+		colorcube41();// xanh la vang ngoai cung phia duoi
+		colorcube42();// trang do xanh la
+		colorcube43();// trang do xanh duong
+		colorcube44();// trang xanh la cam
+		colorcube45();// trang xanh duong cam
+		colorcube46();// do xanh la ngoai cung be trai
+		colorcube47();// do xanh duong ngoai cung be phai
+		colorcube48();// xanh la cam ngoai cung ben trai
+		colorcube49();// cam xanh duong ngoai cung ben trai
+		colorcube50();// do xanh la vang ngoai cung ben trai
+		colorcube51();// xanh duong do vang ngoai cung ben trai
+		colorcube52();// cam xanh la vang ngoai cung ben phai
+		colorcube53();// cam xanh duong vang ngoai cung ben trai
+		colorcube54();// trang giua ben trai
+		colorcube56();// trang giua ben phai
+		colorcube57();// trang giua phia truoc
+		colorcube60();// trang phai phia truoc
+		colorcube61();// trang trai phia truoc
+		colorcube62();// trang xanh la trai ngoai cung phia sau
+		colorcube63();// trang xanh la phai ngoai cung phia sau
+		colorcube65();// trang cam phai ngoai cung phia truoc
+		colorcube66();// trang xanh duong phai ngoai cung phia truoc
+		colorcube67();// trang xanh duong trai ngoai cung phia truoc
+		colorcube68();// trang do trai ngoai cung ben trai
+		colorcube70();// xanh duong giua ben trai
+		colorcube71();// xanh duong trai tren
+		colorcube72();// xanh duong giua tren
+		colorcube73();// xanh duong phai tren
+		colorcube74();// xanh duong giua phai
+		colorcube75();// xanh duong phai duoi
+		colorcube76();// xanh duong giua duoi
+		colorcube77();// xanh duong trai duoi
+		colorcube78();// xanh duong do ngoai cung ben duoi
+		colorcube79();// xanh duong do ngoai cung ben tren
+		colorcube80();// xanh duong cam trai
+		colorcube81();// xanh duong cam phai
+		colorcube82();// xanh duong vang
+		colorcube83();// xanh duong vang
+		colorcube84();// cam
+		colorcube85();// cam
+		colorcube89();// cam
+		colorcube90();// cam
+		colorcube91();// cam
+		colorcube92();// cam vang
+		colorcube94();// cam xanh la
+		colorcube95();// cam xanh la
+		colorcube98();// do
+		colorcube99();// do
+		colorcube100();// do
+		colorcube101();// do
+		colorcube102();// do
+		colorcube104();// do xanh la
+		colorcube105();// do xanh la
+		colorcube107();// do vang
+		colorcube108();// xanh la
+		colorcube109();// xanh la
+		colorcube110();// xanh la
+		colorcube111();// xanh la
+		colorcube112();// xanh la
+		colorcube113();// xanh la
+		colorcube114();// xanh la
+		colorcube115();// xanh la
+		colorcube116();// xanh la vang
+		colorcube117();// xanh la vang
+		colorcube118();// vang
+		colorcube119();// vang
+		colorcube120();// vang
+		colorcube124();// vang
+		colorcube125();// vang
+		if (inverse == 0)
+		{
+			glRotatef(theta, 0.0, 0.0, 1.0);
+		}
+		else
+		{
+			glRotatef(-theta, 0.0, 0.0, 1.0);
+		}
+		colorcube7();// back 1 center
+		colorcube11();// top 1 back 1 center
+		colorcube15();// back 1 bottom 1 center
+		colorcube16();// top 1 back 1 left
+		colorcube18();// top 1 back 1 right
+		colorcube20();// left 1 back 1 center
+		colorcube22();// right 1 back 1 center
+		colorcube24();// left 1 back 1 bottom
+		colorcube26();// right 1 back 1 bottom
+		colorcube55();// trang tren phia sau
+		colorcube58();// trang trai phia sau
+		colorcube59();// trang phai phia sau
+		colorcube64();// trang cam phai ngoai cung phia sau
+		colorcube69();// trang do phai ngoai cung ben phai
+		colorcube86();// cam
+		colorcube87();// cam
+		colorcube88();// cam
+		colorcube93();// cam vang
+		colorcube96();// do
+		colorcube97();// do
+		colorcube103();// do
+		colorcube106();// do vang
+		colorcube121();// vang
+		colorcube122();// vang
+		colorcube123();// vang
+	}
 	
 	glPopMatrix();
 	//glFlush();
@@ -3515,6 +4331,102 @@ void transpose(char a)
 			}
 		}
 	}
+	if (a == 'z')// top1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = top[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				top[i][j] = temp[i][j];
+			}
+		}
+	}
+	if (a == 'x')// bottom1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = bottom[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				bottom[i][j] = temp[i][j];
+			}
+		}
+	}
+	if (a == 'c')// left1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = fleft[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				fleft[i][j] = temp[i][j];
+			}
+		}
+	}
+	if (a == 'v')// right1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = fright[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				fright[i][j] = temp[i][j];
+			}
+		}
+	}
+	if (a == 'n')// front1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = front[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				front[i][j] = temp[i][j];
+			}
+		}
+	}
+	if (a == 'm')// back1
+	{
+		int temp[5][5];
+		int index;
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				index = 4 - j%5;
+				temp[index][i] = back[i][j];
+			}
+		}
+		for(int i = 0; i < 5; ++i) {
+			for(int j = 0; j < 5; ++j) {
+				back[i][j] = temp[i][j];
+			}
+		}
+	}
 }
 void topc()
 {
@@ -3690,6 +4602,180 @@ void bottomc()
 	fright[4][3] = temp4;
 	fright[4][4] = temp5;
 }
+void topc1()
+{
+	transpose('z');
+	int temp1 = front[1][0];
+	int temp2 = front[1][1];
+	int temp3 = front[1][2];
+	int temp4 = front[1][3];
+	int temp5 = front[1][4];
+	front[1][0] = fright[1][0];
+	front[1][1] = fright[1][1];
+	front[1][2] = fright[1][2];
+	front[1][3] = fright[1][3];
+	front[1][4] = fright[1][4];
+	fright[1][0] = back[1][0];
+	fright[1][1] = back[1][1];
+	fright[1][2] = back[1][2];
+	fright[1][3] = back[1][3];
+	fright[1][4] = back[1][4];
+	back[1][0] = fleft[1][0];
+	back[1][1] = fleft[1][1];
+	back[1][2] = fleft[1][2];
+	back[1][3] = fleft[1][3];
+	back[1][4] = fleft[1][4];
+	fleft[1][0] = temp1;
+	fleft[1][1] = temp2;
+	fleft[1][2] = temp3;
+	fleft[1][3] = temp4;
+	fleft[1][4] = temp5;
+}
+void bottomc1()
+{
+	transpose('x');
+	int temp1 = front[3][0];
+	int temp2 = front[3][1];
+	int temp3 = front[3][2];
+	int temp4 = front[3][3];
+	int temp5 = front[3][4];
+	front[3][0] = fright[3][0];
+	front[3][1] = fright[3][1];
+	front[3][2] = fright[3][2];
+	front[3][3] = fright[3][3];
+	front[3][4] = fright[3][4];
+	fright[3][0] = back[3][0];
+	fright[3][1] = back[3][1];
+	fright[3][2] = back[3][2];
+	fright[3][3] = back[3][3];
+	fright[3][4] = back[3][4];
+	back[3][0] = fleft[3][0];
+	back[3][1] = fleft[3][1];
+	back[3][2] = fleft[3][2];
+	back[3][3] = fleft[3][3];
+	back[3][4] = fleft[3][4];
+	fleft[3][0] = temp1;
+	fleft[3][1] = temp2;
+	fleft[3][2] = temp3;
+	fleft[3][3] = temp4;
+	fleft[3][4] = temp5;
+}
+void leftc1()
+{
+	transpose('c');
+	int temp1 = front[0][1];
+	int temp2 = front[1][1];
+	int temp3 = front[2][1];
+	int temp4 = front[3][1];
+	int temp5 = front[4][1];
+	front[0][1] = top[0][1];
+	front[1][1] = top[1][1];
+	front[2][1] = top[2][1];
+	front[3][1] = top[3][1];
+	front[4][1] = top[4][1];
+	top[0][1] = back[4][3];
+	top[1][1] = back[3][3];
+	top[2][1] = back[2][3];
+	top[3][1] = back[1][3];
+	top[4][1] = back[0][3];
+	back[4][3] = bottom[0][1];
+	back[3][3] = bottom[1][1];
+	back[2][3] = bottom[2][1];
+	back[1][3] = bottom[3][1];
+	back[0][3] = bottom[4][1];
+	bottom[0][1] = temp1;
+	bottom[1][1] = temp2;
+	bottom[2][1] = temp3;
+	bottom[3][1] = temp4;
+	bottom[4][1] = temp5;
+}
+void rightc1()
+{
+	transpose('v');
+	int temp1 = top[0][3];
+	int temp2 = top[1][3];
+	int temp3 = top[2][3];
+	int temp4 = top[3][3];
+	int temp5 = top[4][3];
+	top[0][3] = front[0][3];
+	top[1][3] = front[1][3];
+	top[2][3] = front[2][3];
+	top[3][3] = front[3][3];
+	top[4][3] = front[4][3];
+	front[0][3] = bottom[0][3];
+	front[1][3] = bottom[1][3];
+	front[2][3] = bottom[2][3];
+	front[3][3] = bottom[3][3];
+	front[4][3] = bottom[4][3];
+	bottom[0][3] = back[4][1];
+	bottom[1][3] = back[3][1];
+	bottom[2][3] = back[2][1];
+	bottom[3][3] = back[1][1];
+	bottom[4][3] = back[0][1];
+	back[4][1] = temp1;
+	back[3][1] = temp2;
+	back[2][1] = temp3;
+	back[1][1] = temp4;
+	back[0][1] = temp5;
+}
+void frontc1()
+{
+	transpose('n');
+	int temp1 = fleft[0][3];
+	int temp2 = fleft[1][3];
+	int temp3 = fleft[2][3];
+	int temp4 = fleft[3][3];
+	int temp5 = fleft[4][3];
+	fleft[0][3] = bottom[1][0];
+	fleft[1][3] = bottom[1][1];
+	fleft[2][3] = bottom[1][2];
+	fleft[3][3] = bottom[1][3];
+	fleft[4][3] = bottom[1][4];
+	bottom[1][0] = fright[4][1];
+	bottom[1][1] = fright[3][1];
+	bottom[1][2] = fright[2][1];
+	bottom[1][3] = fright[1][1];
+	bottom[1][4] = fright[0][1];
+	fright[4][1] = top[3][4];
+	fright[3][1] = top[3][3];
+	fright[2][1] = top[3][2];
+	fright[1][1] = top[3][1];
+	fright[0][1] = top[3][0];
+	top[3][4] = temp1;
+	top[3][3] = temp2;
+	top[3][2] = temp3;
+	top[3][1] = temp4;
+	top[3][0] = temp5;
+}
+void backc1()
+{
+	transpose('m');
+	int temp1 = top[1][0];
+	int temp2 = top[1][1];
+	int temp3 = top[1][2];
+	int temp4 = top[1][3];
+	int temp5 = top[1][4];
+	top[1][0] = fright[0][3];
+	top[1][1] = fright[1][3];
+	top[1][2] = fright[2][3];
+	top[1][3] = fright[3][3];
+	top[1][4] = fright[4][3];
+	fright[0][3] = bottom[3][4];
+	fright[1][3] = bottom[3][3];
+	fright[2][3] = bottom[3][2];
+	fright[3][3] = bottom[3][1];
+	fright[4][3] = bottom[3][0];
+	bottom[3][4] = fleft[4][1];
+	bottom[3][3] = fleft[3][1];
+	bottom[3][2] = fleft[2][1];
+	bottom[3][1] = fleft[1][1];
+	bottom[3][0] = fleft[0][1];
+	fleft[4][1] = temp1;
+	fleft[3][1] = temp2;
+	fleft[2][1] = temp3;
+	fleft[1][1] = temp4;
+	fleft[0][1] = temp5;
+}
 void spincube() {
 	theta += 0.5 + speed;
 	if (theta == 360.0)
@@ -3756,6 +4842,66 @@ void spincube() {
 			bottomc();
 			bottomc();
 			bottomc();
+		}
+		if (rotation == 7 && inverse == 0)
+		{
+			topc1();
+		}
+		if (rotation == 7 && inverse == 1)
+		{
+			topc1();
+			topc1();
+			topc1();
+		}
+		if (rotation == 8 && inverse == 0)
+		{
+			bottomc1();
+		}
+		if (rotation == 8 && inverse == 1)
+		{
+			bottomc1();
+			bottomc1();
+			bottomc1();
+		}
+		if (rotation == 9 && inverse == 0)
+		{
+			leftc1();
+		}
+		if (rotation == 9 && inverse == 1)
+		{
+			leftc1();
+			leftc1();
+			leftc1();
+		}
+		if (rotation == 10 && inverse == 0)
+		{
+			rightc1();
+		}
+		if (rotation == 10 && inverse == 1)
+		{
+			rightc1();
+			rightc1();
+			rightc1();
+		}
+		if (rotation == 11 && inverse == 0)
+		{
+			frontc1();
+		}
+		if (rotation == 11 && inverse == 1)
+		{
+			frontc1();
+			frontc1();
+			frontc1();
+		}
+		if (rotation == 12 && inverse == 0)
+		{
+			backc1();
+		}
+		if (rotation == 12 && inverse == 1)
+		{
+			backc1();
+			backc1();
+			backc1();
 		}
 		rotation = 0;
 		theta = 0;
@@ -3877,6 +5023,102 @@ static void keyboard(unsigned char key, int x, int y)
 		rotation = 6;
 		inverse = 1;
 		solve[++count] = -6;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'j' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 7;
+		inverse = 0;
+		solve[++count] = 7;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'u' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 7;
+		inverse = 1;
+		solve[++count] = -7;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'k' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 8;
+		inverse = 0;
+		solve[++count] = 8;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'i' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 8;
+		inverse = 1;
+		solve[++count] = -8;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'l' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 9;
+		inverse = 0;
+		solve[++count] = 9;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'p' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 9;
+		inverse = 1;
+		solve[++count] = -9;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'z' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 10;
+		inverse = 0;
+		solve[++count] = 10;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'x' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 10;
+		inverse = 1;
+		solve[++count] = -10;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'c' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 11;
+		inverse = 0;
+		solve[++count] = 11;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'v' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 11;
+		inverse = 1;
+		solve[++count] = -11;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'b' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 12;
+		inverse = 0;
+		solve[++count] = 12;
+		glutIdleFunc(spincube);
+	}
+	if (key == 'n' && rotationcomplete == 1)
+	{
+		rotationcomplete = 0;
+		rotation = 12;
+		inverse = 1;
+		solve[++count] = -12;
 		glutIdleFunc(spincube);
 	}
 	if (key == '2' && rotationcomplete == 1)
