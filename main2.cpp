@@ -4189,7 +4189,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = fright[i][j];
+				temp[i][j] = fright[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4215,7 +4215,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = top[i][j];
+				temp[i][j] = top[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4242,7 +4242,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = front[i][j];
+				temp[i][j] = front[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4269,7 +4269,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = fleft[i][j];
+				temp[i][j] = fleft[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4295,7 +4295,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = back[i][j];
+				temp[i][j] = back[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4322,7 +4322,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = bottom[i][j];
+				temp[i][j] = bottom[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4338,7 +4338,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = top[i][j];
+				temp[i][j] = top[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4354,7 +4354,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = bottom[i][j];
+				temp[i][j] = bottom[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4370,7 +4370,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = fleft[i][j];
+				temp[i][j] = fleft[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4386,7 +4386,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = fright[i][j];
+				temp[i][j] = fright[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4402,7 +4402,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = front[i][j];
+				temp[i][j] = front[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
@@ -4418,7 +4418,7 @@ void transpose(char a)
 		for(int i = 0; i < 5; ++i) {
 			for(int j = 0; j < 5; ++j) {
 				index = 4 - j%5;
-				temp[index][i] = back[i][j];
+				temp[i][j] = back[index][i];
 			}
 		}
 		for(int i = 0; i < 5; ++i) {
