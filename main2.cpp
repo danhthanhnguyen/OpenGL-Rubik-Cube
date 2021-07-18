@@ -4331,102 +4331,6 @@ void transpose(char a)
 			}
 		}
 	}
-	if (a == 'z')// top1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = top[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				top[i][j] = temp[i][j];
-			}
-		}
-	}
-	if (a == 'x')// bottom1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = bottom[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				bottom[i][j] = temp[i][j];
-			}
-		}
-	}
-	if (a == 'c')// left1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = fleft[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				fleft[i][j] = temp[i][j];
-			}
-		}
-	}
-	if (a == 'v')// right1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = fright[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				fright[i][j] = temp[i][j];
-			}
-		}
-	}
-	if (a == 'n')// front1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = front[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				front[i][j] = temp[i][j];
-			}
-		}
-	}
-	if (a == 'm')// back1
-	{
-		int temp[5][5];
-		int index;
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				index = 4 - j%5;
-				temp[i][j] = back[index][i];
-			}
-		}
-		for(int i = 0; i < 5; ++i) {
-			for(int j = 0; j < 5; ++j) {
-				back[i][j] = temp[i][j];
-			}
-		}
-	}
 }
 void topc()
 {
@@ -4604,7 +4508,6 @@ void bottomc()
 }
 void topc1()
 {
-	transpose('z');
 	int temp1 = front[1][0];
 	int temp2 = front[1][1];
 	int temp3 = front[1][2];
@@ -4633,7 +4536,6 @@ void topc1()
 }
 void bottomc1()
 {
-	transpose('x');
 	int temp1 = front[3][0];
 	int temp2 = front[3][1];
 	int temp3 = front[3][2];
@@ -4662,7 +4564,6 @@ void bottomc1()
 }
 void leftc1()
 {
-	transpose('c');
 	int temp1 = front[0][1];
 	int temp2 = front[1][1];
 	int temp3 = front[2][1];
@@ -4691,7 +4592,6 @@ void leftc1()
 }
 void rightc1()
 {
-	transpose('v');
 	int temp1 = top[0][3];
 	int temp2 = top[1][3];
 	int temp3 = top[2][3];
@@ -4720,7 +4620,6 @@ void rightc1()
 }
 void frontc1()
 {
-	transpose('n');
 	int temp1 = fleft[0][3];
 	int temp2 = fleft[1][3];
 	int temp3 = fleft[2][3];
@@ -4749,7 +4648,6 @@ void frontc1()
 }
 void backc1()
 {
-	transpose('m');
 	int temp1 = top[1][0];
 	int temp2 = top[1][1];
 	int temp3 = top[1][2];
