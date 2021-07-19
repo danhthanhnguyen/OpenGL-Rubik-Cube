@@ -13,6 +13,12 @@ back[5][5] = { {3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3},{3,3,3,3,3} },
 bottom[5][5] = { {4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4} },
 fleft[5][5] = { {5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5} },
 temp[5][5];
+
+float TableX = 15.0; //Table's X size
+float TableY = 20.0; //Table's Y size
+float TableHeight = 5.0;//Table's Height
+
+GLUquadricObj* cyl;
 int solve[300];
 int count = 0;
 static int rotation = 0;
@@ -2282,24 +2288,44 @@ void colorcube125()
 }
 void drawFloor(int textureId)
 {
-  glEnable(GL_TEXTURE_2D);
+	glPushMatrix();
+    // glColor3f(0.5, 0.25, 0.0);
+    glTranslatef(1.0,0.0,18.0);
+    cyl = gluNewQuadric();
+    glRotatef(-90,1.0,0.0,0.0);
+    gluCylinder(cyl, 0.5, 0.5, TableHeight, 30, 40); //Leg of Table 1
+    glPushMatrix();
+    cyl = gluNewQuadric();
+    glTranslatef(TableX,0.0,0.0);
+    gluCylinder(cyl, 0.5, 0.5, TableHeight, 30, 40); //Leg of Table 2
+    glPushMatrix();
+    cyl = gluNewQuadric();
+    glTranslatef(0.0, TableY, 0.0);
+    gluCylinder(cyl, 0.5, 0.5, TableHeight, 30, 40); //Leg of Table 3
+    glPushMatrix();
+    cyl = gluNewQuadric();
+    glTranslatef(-TableX,0.0,0.0);
+    gluCylinder(cyl, 0.5, 0.5, TableHeight, 30, 40); //Leg of Table 4
+    glPushMatrix();
+    glTranslatef(TableX/2.0, -TableY/2.0, TableHeight);
+    glScalef(TableX+2, TableY+2, 0.5);
+	glEnable(GL_TEXTURE_GEN_S);
+    glEnable(GL_TEXTURE_GEN_T);
+  	glEnable(GL_TEXTURE_2D);
+	glEnable(GL_BLEND);
 	glBindTexture(GL_TEXTURE_2D, textureId);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	glBegin(GL_QUADS);
-
-	glNormal3f(0, 1, 0);
-	glTexCoord2f(0, 0);
-	glVertex3f(-FLOOR_SIZE / 2, 0, FLOOR_SIZE / 2);
-	glTexCoord2f(0, 20);
-	glVertex3f(-FLOOR_SIZE / 2, 0, -FLOOR_SIZE / 2);
-	glTexCoord2f(20, 20);
-	glVertex3f(FLOOR_SIZE / 2, 0, -FLOOR_SIZE / 2);
-	glTexCoord2f(20, 0);
-	glVertex3f(FLOOR_SIZE / 2, 0, FLOOR_SIZE / 2);
-
-	glEnd();
+    glutSolidCube(1);
+	glDisable(GL_BLEND);
+  	glDisable(GL_TEXTURE_2D);
+    glDisable(GL_TEXTURE_GEN_S);
+    glDisable(GL_TEXTURE_GEN_T);
+    glPopMatrix();
+    glPopMatrix();
+    glPopMatrix();
+    glPopMatrix();
+    glPopMatrix();
 }
 GLuint loadTexture(Image* image) {
 	GLuint textureId;
@@ -2323,7 +2349,7 @@ void initRendering() {
 	glEnable(GL_COLOR_MATERIAL);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	
-	Image* image = loadBMP("floor.bmp");
+	Image* image = loadBMP("wood.bmp");
 	_textureId = loadTexture(image);
 	delete image;
 }
@@ -4098,37 +4124,31 @@ void display()
 void init_func ()
 {
 	GLfloat ambient_lighte[4]={0.2,0.2,0.2,1.0}; 
-  GLfloat diffuse_light[4]={0.7,0.7,0.7,1.0};
-  GLfloat specular_light[4]={1.0, 1.0, 1.0, 1.0};
-  GLfloat light_position[4]={15.0, 15.0, 15.0, 1.0};
+	GLfloat diffuse_light[4]={0.7,0.7,0.7,1.0};
+	GLfloat specular_light[4]={1.0, 1.0, 1.0, 1.0};
+	GLfloat light_position[4]={15.0, 15.0, 15.0, 1.0};
 
-  GLfloat specularity[4]={1.0,1.0,1.0,1.0}; 
-  GLint material_specularity = 50;
+	GLfloat specularity[4]={1.0,1.0,1.0,1.0}; 
+	GLint material_specularity = 50;
 
-  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-  glShadeModel(GL_SMOOTH);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glShadeModel(GL_SMOOTH);
 
-  glMaterialfv(GL_FRONT,GL_SPECULAR, specularity);
-  glMateriali(GL_FRONT,GL_SHININESS,material_specularity);
+	glMaterialfv(GL_FRONT,GL_SPECULAR, specularity);
+	glMateriali(GL_FRONT,GL_SHININESS,material_specularity);
 
-  glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambient_lighte);
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambient_lighte);
 
-  glLightfv(GL_LIGHT0, GL_AMBIENT, ambient_lighte); 
-  glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse_light );
-  glLightfv(GL_LIGHT0, GL_SPECULAR, specular_light );
-  glLightfv(GL_LIGHT0, GL_POSITION, light_position );
-
-  glEnable(GL_COLOR_MATERIAL);
-  glEnable(GL_LIGHTING);  
-  glEnable(GL_LIGHT0);
-  glEnable(GL_DEPTH_TEST);
-
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient_lighte); 
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse_light );
+	glLightfv(GL_LIGHT0, GL_SPECULAR, specular_light );
+	glLightfv(GL_LIGHT0, GL_POSITION, light_position );
 }
 void drawScene() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(1,1,1, 0,0,0, 0,1,0);
+	gluLookAt(5,5,4, 0,0,0, 0,1,0);
 	
 	glPushMatrix();
 	glTranslatef(0, 10, 0);
@@ -4162,10 +4182,10 @@ void drawScene() {
 	glDisable(GL_STENCIL_TEST); //Disable using the stencil buffer
 	
 	//Blend the floor onto the screen
-	glEnable(GL_BLEND);
+	// glEnable(GL_BLEND);
 	glColor4f(1, 1, 1, 0.7);
 	drawFloor(_textureId);
-	glDisable(GL_BLEND);
+	// glDisable(GL_BLEND);
 	
 	glutSwapBuffers();
 }
