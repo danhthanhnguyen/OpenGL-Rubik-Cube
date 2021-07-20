@@ -14,8 +14,8 @@ bottom[5][5] = { {4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4},{4,4,4,4,4} },
 fleft[5][5] = { {5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5},{5,5,5,5,5} },
 temp[5][5];
 
-float TableX = 15.0; //Table's X size
-float TableY = 20.0; //Table's Y size
+float TableX = 16.0; //Table's X size
+float TableY = 22.0; //Table's Y size
 float TableHeight = 5.0;//Table's Height
 
 GLUquadricObj* cyl;
@@ -2290,7 +2290,7 @@ void drawFloor(int textureId)
 {
 	glPushMatrix();
     // glColor3f(0.5, 0.25, 0.0);
-    glTranslatef(1.0,0.0,18.0);
+    glTranslatef(-TableX/2,0.0,TableY/2);
     cyl = gluNewQuadric();
     glRotatef(-90,1.0,0.0,0.0);
     gluCylinder(cyl, 0.5, 0.5, TableHeight, 30, 40); //Leg of Table 1
@@ -4131,7 +4131,7 @@ void init_func ()
 	GLfloat specularity[4]={1.0,1.0,1.0,1.0}; 
 	GLint material_specularity = 50;
 
-	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClearColor(0.5f, 0.5f, 0.5f, 1);
 	glShadeModel(GL_SMOOTH);
 
 	glMaterialfv(GL_FRONT,GL_SPECULAR, specularity);
@@ -4148,7 +4148,14 @@ void drawScene() {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(5,5,4, 0,0,0, 0,1,0);
+	gluLookAt(18,30,25, 0,0,0, 0,1,0);
+
+	GLfloat fogColor[] = {0.5f, 0.5f, 0.5f, 1};
+	glFogfv(GL_FOG_COLOR, fogColor);
+	glFogi(GL_FOG_MODE, GL_LINEAR);
+	glFogf(GL_FOG_START, 10.0f);
+	glFogf(GL_FOG_END, 55.0f);
+	glFogf(GL_FOG_DENSITY, 0.05f);
 	
 	glPushMatrix();
 	glTranslatef(0, 10, 0);
@@ -4156,6 +4163,7 @@ void drawScene() {
 	display();
 	glPopMatrix();
 	
+	glEnable(GL_FOG);
 	glEnable(GL_STENCIL_TEST); //Enable using the stencil buffer
 	glColorMask(0, 0, 0, 0); //Disable drawing colors to the screen
 	glDisable(GL_DEPTH_TEST); //Disable depth testing
@@ -4183,9 +4191,10 @@ void drawScene() {
 	
 	//Blend the floor onto the screen
 	// glEnable(GL_BLEND);
-	glColor4f(1, 1, 1, 0.7);
+	glColor4f(1, 1, 1, 0.6);
 	drawFloor(_textureId);
 	// glDisable(GL_BLEND);
+	glDisable(GL_FOG);
 	
 	glutSwapBuffers();
 }
@@ -5100,9 +5109,7 @@ void myreshape(int w, int h)
 	glViewport(0, 0, w, h);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	if (w <= h)glOrtho(-15.0, 15.0, -15.0 * (GLfloat)h / (GLfloat)w, 15.0 * (GLfloat)h / (GLfloat)w, -15.0, 15.0);
-	else
-		glOrtho(-15.0 * (GLfloat)w / (GLfloat)h, 15.0 * (GLfloat)w / (GLfloat)h, -15.0, 15.0, -15.0, 15.0);
+	gluPerspective(45.0, (float)w / (float)h, 0.4, 500.0);
 	glMatrixMode(GL_MODELVIEW);
 }
 
